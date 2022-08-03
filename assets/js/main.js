@@ -143,6 +143,10 @@
       $(this).html(countNumber);
     });
   });
+  window.odometerOptions = {
+    duration: 30000,
+    //,animation: 'count'
+  };
 
   //  magnificPopup
   var magnifPopup = function () {
@@ -224,3 +228,24 @@
 
   // tooltip
 })(jQuery);
+var learnMoreBtn = document.querySelectorAll(".learnMoreBtn");
+console.log(learnMoreBtn);
+
+learnMoreBtn.forEach((learnMore) => {
+  console.log(learnMore);
+  learnMore.addEventListener("click", function () {
+    if (learnMore.classList.contains("learnMoreMed")) {
+      location.href = "https://goodnessmed.com";
+    } else if (learnMore.classList.contains("learnMoreCorn")) {
+      location.href = "https://mycornerstonemed.com";
+    } else if (learnMore.classList.contains("learnMoreStg")) {
+      location.href = "https://mystgei.com";
+    } else if (learnMore.classList.contains("learnMoreTos")) {
+      location.href = "https://tosvvischools.com/";
+    } else if (learnMore.classList.contains("learnMorePow")) {
+      location.href = "https://operations.powerecng.com/";
+    } else if (learnMore.classList.contains("learnMoreMin")) {
+      location.href = "https://min-bank-app.netlify.app/";
+    }
+  });
+});
