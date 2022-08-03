@@ -1,10 +1,3 @@
-/*******************************************************
-    Template Name    : Jaxson - Responsive Bootstrap 4 One Page Portfolio Html Template
-    Author           : Setblue
-    Version          : 1.0
-    Created          : 2021
-    File Description : Main css file of the template
-*******************************************************/
 (function ($) {
   ("use strict");
 
@@ -14,6 +7,7 @@
   $(".navbar-toggler").on("click", function () {
     if (!$("#mainNav").hasClass("navbar-reduce")) {
       $("#mainNav").addClass("navbar-reduce");
+      // $(".mylogo").attr("src", "../assets/image/logowhite.png");
     }
   });
 
@@ -47,9 +41,11 @@
     if ($(window).scrollTop() > pixels) {
       $(".navbar-expand-md").addClass("navbar-reduce");
       $(".navbar-expand-md").removeClass("navbar-trans");
+      // $(".mylogo").attr("src", "../assets/image/logowhite.png");
     } else {
       $(".navbar-expand-md").addClass("navbar-trans");
       $(".navbar-expand-md").removeClass("navbar-reduce");
+      // $(".mylogo").attr("src", "../assets/image/logoblack.png");
     }
     if ($(window).scrollTop() > top) {
       $(".scrolltop-mf").fadeIn(1000, "easeInOutExpo");
