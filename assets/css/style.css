@@ -47,7 +47,7 @@ h6 {
 img {
   max-width: 100%;
 }
-img.mylogo{
+img.mylogo {
   max-width: 200px !important;
 }
 @media (min-width: 900px) {
@@ -537,7 +537,7 @@ ul {
   position: relative;
   color: #fff;
   text-align: center;
-  background: url(../image/main-bg.JPG);
+  background: url('../image/main-bg.JPG');
   background-repeat: no-repeat;
   background-size: cover;
   /* background-position: center top; */
@@ -877,7 +877,7 @@ ul {
   transition: 0.5s;
 }
 .project-item .project-img-overlay:hover .project-content h4,
-.project-item .project-img-overlay:hover .project-content .learnMoreBtn{
+.project-item .project-img-overlay:hover .project-content .learnMoreBtn {
   -webkit-transform: translateY(0);
   transform: translateY(0);
   opacity: 1;
