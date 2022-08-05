@@ -7,7 +7,6 @@
   $(".navbar-toggler").on("click", function () {
     if (!$("#mainNav").hasClass("navbar-reduce")) {
       $("#mainNav").addClass("navbar-reduce");
-      // $(".mylogo").attr("src", "../assets/image/logowhite.png");
     }
   });
 
@@ -41,11 +40,11 @@
     if ($(window).scrollTop() > pixels) {
       $(".navbar-expand-md").addClass("navbar-reduce");
       $(".navbar-expand-md").removeClass("navbar-trans");
-      // $(".mylogo").attr("src", "../assets/image/logowhite.png");
+      $(".mylogo").attr("src", "../assets/image/logowhite.png");
     } else {
       $(".navbar-expand-md").addClass("navbar-trans");
       $(".navbar-expand-md").removeClass("navbar-reduce");
-      // $(".mylogo").attr("src", "../assets/image/logoblack.png");
+      $(".mylogo").attr("src", "../assets/image/logoblack.png");
     }
     if ($(window).scrollTop() > top) {
       $(".scrolltop-mf").fadeIn(1000, "easeInOutExpo");
@@ -230,6 +229,10 @@
 })(jQuery);
 var learnMoreBtn = document.querySelectorAll(".learnMoreBtn");
 console.log(learnMoreBtn);
+
+var navbar = document.querySelector("#mainNav");
+if(navbar.classList.contains(''))
+console.log(navbar);
 
 learnMoreBtn.forEach((learnMore) => {
   console.log(learnMore);
