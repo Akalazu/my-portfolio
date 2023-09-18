@@ -231,8 +231,7 @@ var learnMoreBtn = document.querySelectorAll(".learnMoreBtn");
 console.log(learnMoreBtn);
 
 var navbar = document.querySelector("#mainNav");
-if(navbar.classList.contains(''))
-console.log(navbar);
+if (navbar.classList.contains("")) console.log(navbar);
 
 learnMoreBtn.forEach((learnMore) => {
   console.log(learnMore);
@@ -241,8 +240,8 @@ learnMoreBtn.forEach((learnMore) => {
       location.href = "https://goodnessmed.com";
     } else if (learnMore.classList.contains("learnMoreCorn")) {
       location.href = "https://mycornerstonemed.com";
-    } else if (learnMore.classList.contains("learnMoreStg")) {
-      location.href = "https://mystgei.com";
+    } else if (learnMore.classList.contains("learnMoreArt")) {
+      location.href = "https://myartchain.com";
     } else if (learnMore.classList.contains("learnMoreTos")) {
       location.href = "https://tosvvischools.com/";
     } else if (learnMore.classList.contains("learnMorePow")) {
