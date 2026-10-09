@@ -1,0 +1,13 @@
+{
+  "name": "akalazu-portfolio",
+  "private": true,
+  "version": "3.0.0",
+  "description": "Akalazu David portfolio",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.24.0",
+    "html-minifier-terser": "7.2.0"
+  }
+}

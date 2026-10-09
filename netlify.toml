@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Security and cache headers are generated into dist/_headers by build.mjs
+# (the Content-Security-Policy needs hashes of the minified inline script).
