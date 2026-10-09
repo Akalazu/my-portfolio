@@ -1,1456 +1,551 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en" class="no-js">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-    <title>Akalazu David | Front End Developer</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-
-    <link
-      rel=" shortcut icon"
-      href="./assets/image/favcon.png"
-      type="image/png"
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akalazu David — Software Engineer & Technical Project Manager</title>
+    <meta
+      name="description"
+      content="Akalazu Udochukwu David — backend-focused Software Engineer and Technical Project Manager building multi-tenant SaaS, APIs and data pipelines with PHP, MySQL, JavaScript and React."
     />
-    <meta name="theme-color" content="#000000" />
-
-    <link href="./assets/poppins css" rel="stylesheet" />
-    <!-- google poppins font -->
-
-    <link rel="stylesheet" href="./assets/css/animate.css" />
-    <!-- animate css -->
-
-    <link rel="stylesheet" href="./assets/css/font-awesome.css" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:title" content="Akalazu David — Software Engineer & Technical PM" />
+    <meta
+      property="og:description"
+      content="I build software people rely on every day. Backend, full-stack and technical delivery."
+    />
+    <meta property="og:image" content="./assets/image/david.jpg" />
     <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23fff'/%3E%3Crect x='1' y='1' width='62' height='62' rx='15' fill='none' stroke='%23e6e8ee' stroke-width='2'/%3E%3Ctext x='16' y='45' font-family='Arial' font-weight='900' font-size='38' fill='%232b55e6'%3Ea%3C/text%3E%3Ccircle cx='47' cy='41' r='4.5' fill='%232b55e6'/%3E%3C/svg%3E"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;700;800&family=JetBrains+Mono:wght@500&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
     />
-    <!-- font awesome -->
-
-    <link rel="stylesheet" href="./assets/css/bootstrap.css" />
-    <link rel="stylesheet" href="./assets/css/icofont.min.css" />
-    <!-- bootstrap css -->
-
-    <link rel="stylesheet" href="./assets/css/owl.carousel.css" />
-    <!-- owl carousel -->
-    <link rel="stylesheet" href="./assets/css/owl.theme.default.css" />
-    <!-- owl default -->
-
-    <link rel="stylesheet" href="./assets/css/magnific-popup.css" />
-    <!-- magnific-popup -->
-
-    <link rel="stylesheet" href="./assets/css/odometer.css" />
-    <!-- odometer -->
-
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <!-- style css -->
-
-    <link rel="stylesheet" href="./assets/css/responsive.css" />
-    <!-- // responsive css -->
+    <link rel="stylesheet" href="./assets/css/site.css" />
+    <script>
+      document.documentElement.classList.replace("no-js", "js");
+    </script>
   </head>
   <body>
-    <div class="loader-wrapper" style="display: none">
-      <div class="text-center middle">
-        <div class="lds-ellipsis">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+    <!-- Preloader -->
+    <div class="preloader" aria-hidden="true">
+      <div class="preloader__inner">
+        <div class="preloader__name"><span>Akalazu</span> <span>David</span><b>.</b></div>
+        <div class="preloader__bar"><i></i></div>
+        <div class="preloader__count"><span class="preloader__num">0</span>%</div>
       </div>
     </div>
 
-    <div class="page-wrapper">
-      <nav
-        id="mainNav"
-        class="navbar navbar-b navbar-trans navbar-expand-md fixed-top"
-      >
-        <div class="container">
-          <div class="logo">
-            <a class="light" href="index.html"
-              ><img
-                src="./assets/image/logoblack.png"
-                style="min-width: 200px"
-                class="mylogo"
-            /></a>
-          </div>
-          <button
-            class="navbar-toggler collapsed"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarDefault"
-            aria-controls="navbarDefault"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-          <div
-            class="navbar-collapse collapse justify-content-end"
-            id="navbarDefault"
-          >
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link js-scroll active" href="#home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link js-scroll" href="#about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link js-scroll" href="#service">Service</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link js-scroll" href="#project">Portfolio</a>
-              </li>
-              <!-- <li class="nav-item">
-                <a class="nav-link js-scroll" href="#Testimonial"
-                  >Testimonial</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link js-scroll" href="#blog">Blog</a>
-              </li> -->
-              <li class="nav-item">
-                <a class="nav-link js-scroll" href="#contact">Contact</a>
-              </li>
-            </ul>
-          </div>
+    <!-- Cursor -->
+    <div class="cursor" aria-hidden="true"><div class="cursor__dot"></div><div class="cursor__ring"></div></div>
+    <div class="progress" aria-hidden="true"></div>
+
+    <!-- Nav -->
+    <header class="nav">
+      <div class="container nav__inner">
+        <a href="#top" class="brand" aria-label="Akalazu David, home">
+          <span class="brand__mark">a<i>.</i></span>
+          <span class="brand__text">
+            <strong>Akalazu David</strong>
+            <small>Software Engineer · Technical PM</small>
+          </span>
+        </a>
+        <nav class="nav__links" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#work">Work</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="nav__actions">
+          <a class="pill magnetic" href="./assets/My_Resume.pdf" download="Akalazu_David_CV.pdf">
+            <i data-lucide="download"></i><span>Résumé</span>
+          </a>
+          <a class="pill pill--dark magnetic" href="#contact">
+            <span>Let's talk</span><i data-lucide="arrow-right"></i>
+          </a>
+          <button class="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
         </div>
+      </div>
+    </header>
+
+    <div class="menu" aria-hidden="true">
+      <nav class="menu__links">
+        <a href="#about"><small>01</small>About</a>
+        <a href="#experience"><small>02</small>Experience</a>
+        <a href="#work"><small>03</small>Work</a>
+        <a href="#contact"><small>04</small>Contact</a>
       </nav>
-
-      <header
-        id="home"
-        class="home-area hero-equal-height overflow-hidden section-padding"
-      >
-        <div class="container">
-          <div class="row d-flex align-items-center">
-            <div class="col-lg-10 col-md-8">
-              <div class="text-left home-content z-index position-relative">
-                <p>Hello there, my name is Akalazu David.</p>
-                <h1>
-                  <span
-                    class="element"
-                    data-text1="Full Stack Developer."
-                    data-text2=" UI Designer."
-                    data-text3="Freelancer."
-                    data-loop="true"
-                    data-backdelay="1500"
-                  ></span
-                  ><span class="typed-cursor"></span>
-                </h1>
-                <p>
-                  I am a highly motivated and forward-thinking Full Stack Web
-                  Developer who thrives on pushing boundaries and finding
-                  innovative solutions.
-                </p>
-                <a href="#contact" class="button js-scroll"
-                  >Hire Me <i class="fa fa-arrow-right"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="scroll-btn">
-          <a href="#about" class="js-scroll">
-            <i class="fa fa-arrow-down fa-3x text-white"></i>
-          </a>
-        </div>
-        <div class="social">
-          <a class="text">Social Links</a>
-          <div class="line"></div>
-          <a href="https://web.facebook.com/akalazu.david"
-            ><i class="fa fa-facebook"></i>
-          </a>
-          <a href="https://twitter.com/akalazud"
-            ><i class="fa fa-twitter"></i>
-          </a>
-          <a href="https://github.com/Akalazu"><i class="fa fa-github"></i> </a>
-          <a
-            href="https://www.linkedin.com/in/akalazu-david-1b51861b4
-          "
-            ><i class="fa fa-linkedin"></i>
-          </a>
-        </div>
-      </header>
-
-      <section id="about" class="about-area section-padding">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="section-title">
-                <h2>About Me</h2>
-              </div>
-            </div>
-          </div>
-          <div
-            class="skill-display-section section-gap-tb-165 section-bg pos-relative"
-          >
-            <div class="skill-display-section-box">
-              <div class="container">
-                <div class="row align-items-center">
-                  <div class="col-xl-6 col-xxl-5">
-                    <!-- Start Section Content -->
-                    <div class="section-content">
-                      <!-- <span class="section-tag">Special Skills</span> -->
-                      <h2 class="section-title">
-                        My Special Skill Field Here.
-                      </h2>
-
-                      <a
-                        href="./assets/My_Resume.pdf"
-                        download="Akalazu David Resume"
-                        class="btn btn-xl btn-outline-one icon-space-left rounded mb-5 mb-md-0"
-                        >Get Resume
-                        <img
-                          src="https://img.icons8.com/pastel-glyph/64/000000/download--v1.png"
-                          height="40px"
-                      /></a>
-                    </div>
-                    <!-- End Section Content -->
-                  </div>
-
-                  <div class="col-xl-6 col-xxl-6 offset-xxl-1">
-                    <!-- Start Skill Display Wrapper -->
-                    <div class="skill-display-wrapper">
-                      <!-- Start Skill Progress Single Item -->
-                      <div class="skill-progress-single-item">
-                        <span class="tag">HTML & CSS</span>
-                        <div class="skill-box">
-                          <div
-                            class="progress-line"
-                            data-width="95"
-                            style="width: 95%"
-                          >
-                            <span class="skill-percentage">95%</span>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- ENd Skill Progress Single Item -->
-                      <!-- Start Skill Progress Single Item -->
-                      <div class="skill-progress-single-item">
-                        <span class="tag">Bootstrap</span>
-                        <div class="skill-box">
-                          <div
-                            class="progress-line"
-                            data-width="90"
-                            style="width: 90%"
-                          >
-                            <span class="skill-percentage">90%</span>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- ENd Skill Progress Single Item -->
-                      <!-- Start Skill Progress Single Item -->
-                      <div class="skill-progress-single-item">
-                        <span class="tag text-white">JavaScript</span>
-                        <div class="skill-box">
-                          <div
-                            class="progress-line"
-                            data-width="85"
-                            style="width: 85%"
-                          >
-                            <span class="skill-percentage">85%</span>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- ENd Skill Progress Single Item -->
-                      <!-- Start Skill Progress Single Item -->
-                      <div class="skill-progress-single-item">
-                        <span class="tag">TypeScript</span>
-                        <div class="skill-box">
-                          <div
-                            class="progress-line"
-                            data-width="75"
-                            style="width: 75%"
-                          >
-                            <span class="skill-percentage">75%</span>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- ENd Skill Progress Single Item -->
-                      <!-- Start Skill Progress Single Item -->
-                      <div class="skill-progress-single-item">
-                        <span class="tag">React JS</span>
-                        <div class="skill-box">
-                          <div
-                            class="progress-line"
-                            data-width="85"
-                            style="width: 85%"
-                          >
-                            <span class="skill-percentage">85%</span>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- ENd Skill Progress Single Item -->
-                      <!-- Start Skill Progress Single Item -->
-                      <div class="skill-progress-single-item">
-                        <span class="tag">PHP</span>
-                        <div class="skill-box">
-                          <div
-                            class="progress-line"
-                            data-width="95"
-                            style="width: 95%"
-                          >
-                            <span class="skill-percentage">95%</span>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- ENd Skill Progress Single Item -->
-                      <!-- Start Skill Progress Single Item -->
-                      <div class="skill-progress-single-item">
-                        <span class="tag">Figma</span>
-                        <div class="skill-box">
-                          <div
-                            class="progress-line"
-                            data-width="85"
-                            style="width: 85%"
-                          >
-                            <span class="skill-percentage">85%</span>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- ENd Skill Progress Single Item -->
-                      <!-- Start Skill Progress Single Item -->
-                      <div class="skill-progress-single-item">
-                        <span class="tag">Teamwork</span>
-                        <div class="skill-box">
-                          <div
-                            class="progress-line"
-                            data-width="90"
-                            style="width: 90%"
-                          >
-                            <span class="skill-percentage">90%</span>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- ENd Skill Progress Single Item -->
-                    </div>
-                    <!-- End Skill Display Wrapper -->
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="skill-display-shape"></div>
-          </div>
-          <!--  -->
-        </div>
-      </section>
-
-      <section class="counter-area section-padding">
-        <div class="container">
-          <div class="counter-inner-box">
-            <div class="row">
-              <div class="col-lg-3 col-6 counter-item">
-                <div class="single-counter-box">
-                  <div class="single-counter">
-                    <h3 class="odometer odometer-auto-theme" data-count="5">
-                      <div class="odometer-inside">
-                        <span class="odometer-digit"
-                          ><span class="odometer-digit-spacer">8</span
-                          ><span class="odometer-digit-inner"
-                            ><span class="odometer-ribbon"
-                              ><span class="odometer-ribbon-inner"
-                                ><span class="odometer-value">0</span></span
-                              ></span
-                            ></span
-                          ></span
-                        >
-                      </div>
-                    </h3>
-                    <span style="font-size: 25px">+</span>
-                    <p>Years of experience</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-6 counter-item">
-                <div class="single-counter-box">
-                  <div class="single-counter">
-                    <h3 class="odometer odometer-auto-theme" data-count="45">
-                      <div class="odometer-inside">
-                        <span class="odometer-digit"
-                          ><span class="odometer-digit-spacer">8</span
-                          ><span class="odometer-digit-inner"
-                            ><span class="odometer-ribbon"
-                              ><span class="odometer-ribbon-inner"
-                                ><span class="odometer-value">0</span></span
-                              ></span
-                            ></span
-                          ></span
-                        >
-                      </div>
-                    </h3>
-                    <p>Complete Projects</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-6 counter-item">
-                <div class="single-counter-box">
-                  <div class="single-counter">
-                    <h3 class="odometer odometer-auto-theme" data-count="15">
-                      <div class="odometer-inside">
-                        <span class="odometer-digit"
-                          ><span class="odometer-digit-spacer">8</span
-                          ><span class="odometer-digit-inner"
-                            ><span class="odometer-ribbon"
-                              ><span class="odometer-ribbon-inner"
-                                ><span class="odometer-value">0</span></span
-                              ></span
-                            ></span
-                          ></span
-                        >
-                      </div>
-                    </h3>
-                    <p>Happy Clients</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-6 counter-item">
-                <div class="single-counter-box">
-                  <div class="single-counter">
-                    <h3 class="odometer odometer-auto-theme" data-count="20">
-                      <div class="odometer-inside">
-                        <span class="odometer-digit"
-                          ><span class="odometer-digit-spacer">8</span
-                          ><span class="odometer-digit-inner"
-                            ><span class="odometer-ribbon"
-                              ><span class="odometer-ribbon-inner"
-                                ><span class="odometer-value">0</span></span
-                              ></span
-                            ></span
-                          ></span
-                        >
-                      </div>
-                    </h3>
-                    <p>Student Taught</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="service" class="service-area section-padding">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="section-title">
-                <h2 class="text-white">My Service</h2>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-lg-6 col-sm-6 col-12">
-              <div
-                class="services wow fadeInUp"
-                data-wow-delay="0.2s"
-                data-wow-duration="1.5s"
-                style="
-                  visibility: hidden;
-                  animation-duration: 1.5s;
-                  animation-delay: 0.2s;
-                  animation-name: none;
-                "
-              >
-                <div class="services-title-icon d-flex">
-                  <div class="services-icon">
-                    <i class="fa fa-paint-brush"></i>
-                  </div>
-                  <h4 class="services-title">User Friendly<br />UI Designs</h4>
-                </div>
-                <div class="services-content">
-                  <p class="text">
-                    I have experience designing user interfaces (UIs) and have
-                    worked in a few teams to develop a user-friendly interface
-                    for websites and apps.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6 col-sm-6 col-12">
-              <div
-                class="services wow fadeInUp"
-                data-wow-delay="0.4s"
-                data-wow-duration="1.5s"
-                style="
-                  visibility: hidden;
-                  animation-duration: 1.5s;
-                  animation-delay: 0.4s;
-                  animation-name: none;
-                "
-              >
-                <div class="services-title-icon d-flex">
-                  <div class="services-icon">
-                    <i class="fa fa-cogs"></i>
-                  </div>
-                  <h4 class="services-title">
-                    Back End<br />
-                    Development
-                  </h4>
-                </div>
-                <div class="services-content">
-                  <p class="text">
-                    As a back end developer, I develop and maintain the
-                    server-side logic, databases, and APIs that power the
-                    application.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6 col-sm-6 col-12">
-              <div
-                class="services wow fadeInUp"
-                data-wow-delay="0.8s"
-                data-wow-duration="1.5s"
-                style="
-                  visibility: hidden;
-                  animation-duration: 1.5s;
-                  animation-delay: 0.8s;
-                  animation-name: none;
-                "
-              >
-                <div class="services-title-icon d-flex">
-                  <div class="services-icon">
-                    <i class="fa fa-rocket"></i>
-                  </div>
-                  <h4 class="services-title">Website<br />Design</h4>
-                </div>
-                <div class="services-content">
-                  <p class="text">
-                    I've produced beautiful website designs and layouts thanks
-                    to my strong command of languages like HTML, CSS, and
-                    Javascript. In a nutshell, I enhance your website's
-                    attractiveness.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6 col-sm-6 col-12">
-              <div
-                class="services wow fadeInUp"
-                data-wow-delay="0.6s"
-                data-wow-duration="1.5s"
-                style="
-                  visibility: hidden;
-                  animation-duration: 1.5s;
-                  animation-delay: 0.6s;
-                  animation-name: none;
-                "
-              >
-                <div class="services-title-icon d-flex">
-                  <div class="services-icon">
-                    <i class="fa fa-bullhorn"></i>
-                  </div>
-                  <h4 class="services-title">Tech <br />Educator</h4>
-                </div>
-                <div class="services-content">
-                  <p class="text">
-                    I've taught Javascript to a number of students who began as
-                    complete beginners and are now capable of developing apps
-                    and earning money as JavaScript developers
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="project" class="project-area section-padding">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="section-title">
-                <h2>Portfolio</h2>
-                <p class="section_subtitle">Meet My Awesome Works and Enjoy.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="project-container"
-          style="position: relative; height: 1220.92px"
-        >
-          <div
-            class="col-lg-4 col-md-6 project-grid-item all branding webdesign"
-            style="position: absolute; left: 0px; top: 0px"
-          >
-            <a class="popup-img project-item" href="./assets/image/corner.png">
-              <img src="./assets/image/corner.png" alt="img" />
-              <div class="project-img-overlay">
-                <div class="project-content">
-                  <h4>Cornerstone Medicals</h4>
-                  <h6 class="learnMoreCorn learnMoreBtn">View Project</h6>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div
-            class="col-lg-4 col-md-6 project-grid-item all application photography"
-            style="position: absolute; left: 420.328px; top: 0px"
-          >
-            <a class="popup-img project-item" href="./assets/image/gmed.png">
-              <img src="./assets/image/gmed.png" alt="img" />
-              <div class="project-img-overlay">
-                <div class="project-content">
-                  <h4>Goodness Medical Centre</h4>
-                  <h6 class="learnMoreMed learnMoreBtn">View Project</h6>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div
-            class="col-lg-4 col-md-6 project-grid-item all branding webdesign"
-            style="position: absolute; left: 840.656px; top: 0px"
-          >
-            <a
-              class="popup-img project-item"
-              href="./assets/image/artchain.png"
-            >
-              <img src="./assets/image/artchain.png" alt="img" />
-              <div class="project-img-overlay">
-                <div class="project-content">
-                  <h4>Artchain | The NFT Marketplace</h4>
-                  <h6 class="learnMoreArt learnMoreBtn">View Project</h6>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div
-            class="col-lg-4 col-md-6 project-grid-item all branding webdesig photographyn"
-            style="position: absolute; left: 420.328px; top: 355.266px"
-          >
-            <a class="popup-img project-item" href="./assets/image/tosvvi.png">
-              <img src="./assets/image/tosvvi.png" alt="img" />
-              <div class="project-img-overlay">
-                <div class="project-content">
-                  <h4>Tosvvi Schools</h4>
-                  <h6 class="learnMoreTos learnMoreBtn">View Project</h6>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div
-            class="col-lg-4 col-md-6 project-grid-item all application webdesign photography"
-            style="position: absolute; left: 0px; top: 510.391px"
-          >
-            <a class="popup-img project-item" href="./assets/image/powerec.png">
-              <img src="./assets/image/powerec.png" alt="img" />
-              <div class="project-img-overlay">
-                <div class="project-content">
-                  <h4>Powerec | Operations</h4>
-                  <h6 class="learnMorePow learnMoreBtn">Visit Project</h6>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div
-            class="col-lg-4 col-md-6 project-grid-item all branding photography"
-            style="position: absolute; left: 840.656px; top: 510.391px"
-          >
-            <a class="popup-img project-item" href="./assets/image/bankapp.png">
-              <img src="./assets/image/bankapp.png" alt="img" />
-              <div class="project-img-overlay">
-                <div class="project-content">
-                  <h4>Mini Bank App</h4>
-                  <h6 class="learnMoreMin learnMoreBtn">View Project</h6>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- 
-        TESTIMONIALS
-        <section
-        id="Testimonial"
-        class="testimonials section-padding"
-        data-scroll-index="5"
-        style="
-          background-image: url(&#39;images/background/testimonials-bg.jpg&#39;);
-        "
-      >
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="section-title">
-                <h2 class="text-white">Testimonial</h2>
-                <p class="section_subtitle text-white">
-                  See what my happy clients say about me.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-10 mx-auto">
-              <div
-                class="owl-carousel owl-theme text-center owl-loaded owl-drag"
-              >
-                <div class="owl-stage-outer">
-                  <div
-                    class="owl-stage"
-                    style="
-                      transform: translate3d(-2041px, 0px, 0px);
-                      transition: all 0s ease 0s;
-                      width: 7146px;
-                    "
-                  >
-                    <div class="owl-item cloned" style="width: 1020.83px">
-                      <div class="testimonial-item">
-                        <div class="testimonial-quote">
-                          <i class="fa fa-quote-left"></i>
-                        </div>
-                        <p>
-                          “I am happy Working with printing and typesetting
-                          industry. Quidam lisque persius interesset his et, in
-                          quot quidam persequeris essent possim iriure. simply
-                          dummy text of the printing and typesetting industry.”
-                        </p>
-                        <div class="author-img">
-                          <img
-                            src="./Jaxson - Responsive Bootstrap 4 One Page Portfolio Html Template_files/img-1.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <h5>Mr Patrick Cary</h5>
-                        <span>Freelancer from USA</span>
-                      </div>
-                    </div>
-                    <div class="owl-item cloned" style="width: 1020.83px">
-                      <div class="testimonial-item">
-                        <div class="testimonial-quote">
-                          <i class="fa fa-quote-left"></i>
-                        </div>
-                        <p>
-                          “I have used them twice now. Good rates, very
-                          efficient service and priced simply dummy text of the
-                          printing and typesetting industry quidam interesset
-                          his et. simply dummy text of the printing and
-                          typesetting industry. Excellent.”
-                        </p>
-                        <div class="author-img">
-                          <img
-                            src="./Jaxson - Responsive Bootstrap 4 One Page Portfolio Html Template_files/img-1.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <h5>Mr Dennis Jacques</h5>
-                        <span>Company CEO from UK</span>
-                      </div>
-                    </div>
-                    <div class="owl-item active" style="width: 1020.83px">
-                      <div class="testimonial-item">
-                        <div class="testimonial-quote">
-                          <i class="fa fa-quote-left"></i>
-                        </div>
-                        <p>
-                          "Easy to use, reasonably priced simply dummy text of
-                          the printing and typesetting industry. Quidam lisque
-                          persius interesset his et, in quot quidam possim
-                          iriure. simply dummy text of the printing and
-                          typesetting industry."
-                        </p>
-                        <div class="author-img">
-                          <img
-                            src="./Jaxson - Responsive Bootstrap 4 One Page Portfolio Html Template_files/img-1.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <h5>Mr John Doe</h5>
-                        <span>Creative Director</span>
-                      </div>
-                    </div>
-                    <div class="owl-item" style="width: 1020.83px">
-                      <div class="testimonial-item">
-                        <div class="testimonial-quote">
-                          <i class="fa fa-quote-left"></i>
-                        </div>
-                        <p>
-                          “I am happy Working with printing and typesetting
-                          industry. Quidam lisque persius interesset his et, in
-                          quot quidam persequeris essent possim iriure. simply
-                          dummy text of the printing and typesetting industry.”
-                        </p>
-                        <div class="author-img">
-                          <img
-                            src="./Jaxson - Responsive Bootstrap 4 One Page Portfolio Html Template_files/img-1.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <h5>Mr Patrick Cary</h5>
-                        <span>Freelancer from USA</span>
-                      </div>
-                    </div>
-                    <div class="owl-item" style="width: 1020.83px">
-                      <div class="testimonial-item">
-                        <div class="testimonial-quote">
-                          <i class="fa fa-quote-left"></i>
-                        </div>
-                        <p>
-                          “I have used them twice now. Good rates, very
-                          efficient service and priced simply dummy text of the
-                          printing and typesetting industry quidam interesset
-                          his et. simply dummy text of the printing and
-                          typesetting industry. Excellent.”
-                        </p>
-                        <div class="author-img">
-                          <img
-                            src="./Jaxson - Responsive Bootstrap 4 One Page Portfolio Html Template_files/img-1.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <h5>Mr Dennis Jacques</h5>
-                        <span>Company CEO from UK</span>
-                      </div>
-                    </div>
-                    <div class="owl-item cloned" style="width: 1020.83px">
-                      <div class="testimonial-item">
-                        <div class="testimonial-quote">
-                          <i class="fa fa-quote-left"></i>
-                        </div>
-                        <p>
-                          "Easy to use, reasonably priced simply dummy text of
-                          the printing and typesetting industry. Quidam lisque
-                          persius interesset his et, in quot quidam possim
-                          iriure. simply dummy text of the printing and
-                          typesetting industry."
-                        </p>
-                        <div class="author-img">
-                          <img
-                            src="./Jaxson - Responsive Bootstrap 4 One Page Portfolio Html Template_files/img-1.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <h5>Mr John Doe</h5>
-                        <span>Creative Director</span>
-                      </div>
-                    </div>
-                    <div class="owl-item cloned" style="width: 1020.83px">
-                      <div class="testimonial-item">
-                        <div class="testimonial-quote">
-                          <i class="fa fa-quote-left"></i>
-                        </div>
-                        <p>
-                          “I am happy Working with printing and typesetting
-                          industry. Quidam lisque persius interesset his et, in
-                          quot quidam persequeris essent possim iriure. simply
-                          dummy text of the printing and typesetting industry.”
-                        </p>
-                        <div class="author-img">
-                          <img
-                            src="./Jaxson - Responsive Bootstrap 4 One Page Portfolio Html Template_files/img-1.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <h5>Mr Patrick Cary</h5>
-                        <span>Freelancer from USA</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="owl-nav">
-                  <button type="button" role="presentation" class="owl-prev">
-                    <i class="fa fa-arrow-left"></i></button
-                  ><button type="button" role="presentation" class="owl-next">
-                    <i class="fa fa-arrow-right"></i>
-                  </button>
-                </div>
-                 <div class="owl-dots">
-                  <button role="button" class="owl-dot active">
-                    <span></span></button
-                  ><button role="button" class="owl-dot"><span></span></button
-                  ><button role="button" class="owl-dot"><span></span></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-
-      <!--
-        ARTICLE 
-        <section id="blog" class="blogs section-padding bg-light">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="section-title">
-                <h2>News &amp; Blog</h2>
-                <p class="section_subtitle">Latest Articles For New Project</p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="owl-carousel owl-theme owl-loaded owl-drag">
-                <div class="owl-stage-outer">
-                  <div
-                    class="owl-stage"
-                    style="
-                      transform: translate3d(-1260px, 0px, 0px);
-                      transition: all 0.5s ease 0s;
-                      width: 4204px;
-                    "
-                  >
-                    <div
-                      class="owl-item cloned"
-                      style="width: 390.333px; margin-right: 30px"
-                    >
-                      <div class="blog-item">
-                        <div class="blog-img">
-                          <img
-                            src="./Jaxson - Responsive Bootstrap 4 One Page Portfolio Html Template_files/img-2.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div class="blog-content">
-                          <h3>
-                            The best of web design and web design inspiration
-                          </h3>
-                          <p>
-                            All the Lorem Ipsum generators on the Internet tend
-                            to repeat predefined chunks as necessary, making
-                            this the first ...
-                          </p>
-                          <div class="blog-meta">
-                            <span class="more">
-                              <a
-                                href="https://www.setblue.com/template/jaxson/index-light.html#"
-                                >Read More <i class="fa fa-arrow-right"></i
-                              ></a>
-                            </span>
-                            <span class="date"> 1/May/2021 </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="owl-item cloned"
-                      style="width: 390.333px; margin-right: 30px"
-                    >
-                      <div class="blog-item">
-                        <div class="blog-img">
-                          <img
-                            src="./Jaxson - Responsive Bootstrap 4 One Page Portfolio Html Template_files/img-3.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div class="blog-content">
-                          <h3>
-                            The best of web design and web design inspiration
-                          </h3>
-                          <p>
-                            All the Lorem Ipsum generators on the Internet tend
-                            to repeat predefined chunks as necessary, making
-                            this the first ...
-                          </p>
-                          <div class="blog-meta">
-                            <span class="more">
-                              <a
-                                href="https://www.setblue.com/template/jaxson/index-light.html#"
-                                >Read More <i class="fa fa-arrow-right"></i
-                              ></a>
-                            </span>
-                            <span class="date"> 1/May/2021 </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="owl-item cloned"
-                      style="width: 390.333px; margin-right: 30px"
-                    >
-                      <div class="blog-item">
-                        <div class="blog-img">
-                          <img
-                            src="./Jaxson - Responsive Bootstrap 4 One Page Portfolio Html Template_files/img-4.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div class="blog-content">
-                          <h3>
-                            The best of web design and web design inspiration
-                          </h3>
-                          <p>
-                            All the Lorem Ipsum generators on the Internet tend
-                            to repeat predefined chunks as necessary, making
-                            this the first ...
-                          </p>
-                          <div class="blog-meta">
-                            <span class="more">
-                              <a
-                                href="https://www.setblue.com/template/jaxson/index-light.html#"
-                                >Read More<i class="fa fa-arrow-right"></i
-                              ></a>
-                            </span>
-                            <span class="date"> 1/May/2021 </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="owl-item active"
-                      style="width: 390.333px; margin-right: 30px"
-                    >
-                      <div class="blog-item">
-                        <div class="blog-img">
-                          <img
-                            src="./Jaxson - Responsive Bootstrap 4 One Page Portfolio Html Template_files/img-1(1).jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div class="blog-content">
-                          <h3>
-                            The best of web design and web design inspiration
-                          </h3>
-                          <p>
-                            All the Lorem Ipsum generators on the Internet tend
-                            to repeat predefined chunks as necessary, making
-                            this the first ...
-                          </p>
-                          <div class="blog-meta">
-                            <span class="more">
-                              <a
-                                href="https://www.setblue.com/template/jaxson/index-light.html#"
-                                >Read More <i class="fa fa-arrow-right"></i
-                              ></a>
-                            </span>
-                            <span class="date"> 1/May/2021 </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="owl-item active"
-                      style="width: 390.333px; margin-right: 30px"
-                    >
-                      <div class="blog-item">
-                        <div class="blog-img">
-                          <img
-                            src="./Jaxson - Responsive Bootstrap 4 One Page Portfolio Html Template_files/img-2.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div class="blog-content">
-                          <h3>
-                            The best of web design and web design inspiration
-                          </h3>
-                          <p>
-                            All the Lorem Ipsum generators on the Internet tend
-                            to repeat predefined chunks as necessary, making
-                            this the first ...
-                          </p>
-                          <div class="blog-meta">
-                            <span class="more">
-                              <a
-                                href="https://www.setblue.com/template/jaxson/index-light.html#"
-                                >Read More <i class="fa fa-arrow-right"></i
-                              ></a>
-                            </span>
-                            <span class="date"> 1/May/2021 </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="owl-item active"
-                      style="width: 390.333px; margin-right: 30px"
-                    >
-                      <div class="blog-item">
-                        <div class="blog-img">
-                          <img
-                            src="./Jaxson - Responsive Bootstrap 4 One Page Portfolio Html Template_files/img-3.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div class="blog-content">
-                          <h3>
-                            The best of web design and web design inspiration
-                          </h3>
-                          <p>
-                            All the Lorem Ipsum generators on the Internet tend
-                            to repeat predefined chunks as necessary, making
-                            this the first ...
-                          </p>
-                          <div class="blog-meta">
-                            <span class="more">
-                              <a
-                                href="https://www.setblue.com/template/jaxson/index-light.html#"
-                                >Read More <i class="fa fa-arrow-right"></i
-                              ></a>
-                            </span>
-                            <span class="date"> 1/May/2021 </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="owl-item"
-                      style="width: 390.333px; margin-right: 30px"
-                    >
-                      <div class="blog-item">
-                        <div class="blog-img">
-                          <img
-                            src="./Jaxson - Responsive Bootstrap 4 One Page Portfolio Html Template_files/img-4.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div class="blog-content">
-                          <h3>
-                            The best of web design and web design inspiration
-                          </h3>
-                          <p>
-                            All the Lorem Ipsum generators on the Internet tend
-                            to repeat predefined chunks as necessary, making
-                            this the first ...
-                          </p>
-                          <div class="blog-meta">
-                            <span class="more">
-                              <a
-                                href="https://www.setblue.com/template/jaxson/index-light.html#"
-                                >Read More<i class="fa fa-arrow-right"></i
-                              ></a>
-                            </span>
-                            <span class="date"> 1/May/2021 </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="owl-item cloned"
-                      style="width: 390.333px; margin-right: 30px"
-                    >
-                      <div class="blog-item">
-                        <div class="blog-img">
-                          <img
-                            src="./Jaxson - Responsive Bootstrap 4 One Page Portfolio Html Template_files/img-1(1).jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div class="blog-content">
-                          <h3>
-                            The best of web design and web design inspiration
-                          </h3>
-                          <p>
-                            All the Lorem Ipsum generators on the Internet tend
-                            to repeat predefined chunks as necessary, making
-                            this the first ...
-                          </p>
-                          <div class="blog-meta">
-                            <span class="more">
-                              <a
-                                href="https://www.setblue.com/template/jaxson/index-light.html#"
-                                >Read More <i class="fa fa-arrow-right"></i
-                              ></a>
-                            </span>
-                            <span class="date"> 1/May/2021 </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="owl-item cloned"
-                      style="width: 390.333px; margin-right: 30px"
-                    >
-                      <div class="blog-item">
-                        <div class="blog-img">
-                          <img
-                            src="./Jaxson - Responsive Bootstrap 4 One Page Portfolio Html Template_files/img-2.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div class="blog-content">
-                          <h3>
-                            The best of web design and web design inspiration
-                          </h3>
-                          <p>
-                            All the Lorem Ipsum generators on the Internet tend
-                            to repeat predefined chunks as necessary, making
-                            this the first ...
-                          </p>
-                          <div class="blog-meta">
-                            <span class="more">
-                              <a
-                                href="https://www.setblue.com/template/jaxson/index-light.html#"
-                                >Read More <i class="fa fa-arrow-right"></i
-                              ></a>
-                            </span>
-                            <span class="date"> 1/May/2021 </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="owl-item cloned"
-                      style="width: 390.333px; margin-right: 30px"
-                    >
-                      <div class="blog-item">
-                        <div class="blog-img">
-                          <img
-                            src="./Jaxson - Responsive Bootstrap 4 One Page Portfolio Html Template_files/img-3.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div class="blog-content">
-                          <h3>
-                            The best of web design and web design inspiration
-                          </h3>
-                          <p>
-                            All the Lorem Ipsum generators on the Internet tend
-                            to repeat predefined chunks as necessary, making
-                            this the first ...
-                          </p>
-                          <div class="blog-meta">
-                            <span class="more">
-                              <a
-                                href="https://www.setblue.com/template/jaxson/index-light.html#"
-                                >Read More <i class="fa fa-arrow-right"></i
-                              ></a>
-                            </span>
-                            <span class="date"> 1/May/2021 </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="owl-nav disabled">
-                  <button type="button" role="presentation" class="owl-prev">
-                    <span aria-label="Previous">‹</span></button
-                  ><button type="button" role="presentation" class="owl-next">
-                    <span aria-label="Next">›</span>
-                  </button>
-                </div>
-                <div class="owl-dots disabled"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-
-      <section id="contact" class="contact-area section-padding">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="section-title">
-                <h2>Contact Me</h2>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-6 col-md-6">
-              <div
-                class="contact-information wow fadeInUp"
-                data-wow-delay="0.2s"
-                data-wow-duration="1.5s"
-                style="
-                  visibility: hidden;
-                  animation-duration: 1.5s;
-                  animation-delay: 0.2s;
-                  animation-name: none;
-                "
-              >
-                <div class="row">
-                  <div class="col-sm-12">
-                    <div class="contact-details">
-                      <i class="fa fa-phone"></i>
-                      <p>Phone</p>
-                      <h6>+234 903 594 6770</h6>
-                    </div>
-                  </div>
-                  <div class="col-sm-12">
-                    <div class="contact-details">
-                      <i class="fa fa-envelope"></i>
-                      <p>Email</p>
-                      <h6 style="text-transform: lowercase">
-                        akalazuudochukwu@gmail.com
-                      </h6>
-                    </div>
-                  </div>
-                  <div class="col-sm-12">
-                    <div class="contact-details">
-                      <i class="fa fa-hashtag"></i>
-                      <p>Social Media</p>
-                      <ul class="social-icons">
-                        <li class="">
-                          <a
-                            data-toggle="tooltip"
-                            href="https://web.facebook.com/akalazu.david"
-                            target="_blank"
-                            title=""
-                            data-original-title="Facebook"
-                            ><i class="fa fa-facebook-f"></i
-                          ></a>
-                        </li>
-                        <li class="">
-                          <a
-                            data-toggle="tooltip"
-                            href="https://twitter.com/akalazud"
-                            target="_blank"
-                            title=""
-                            data-original-title="Twitter"
-                            ><i class="fa fa-twitter"></i
-                          ></a>
-                        </li>
-                        <li class="">
-                          <a
-                            data-toggle="tooltip"
-                            href="https://www.linkedin.com/in/akalazu-david-1b51861b4/"
-                            target="_blank"
-                            title=""
-                            data-original-title="Linkedin"
-                            ><i class="fa fa-linkedin"></i
-                          ></a>
-                        </li>
-                        <!-- Linkedin -->
-                        <li class="">
-                          <a
-                            data-toggle="tooltip"
-                            href="https://github.com/Akalazu"
-                            target="_blank"
-                            title=""
-                            data-original-title="GitHub"
-                            ><i class="fa fa-github"></i
-                          ></a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-6">
-              <form
-                class="contact-form form wow fadeInUp"
-                data-wow-delay="0.4s"
-                data-wow-duration="1.5s"
-                style="
-                  visibility: hidden;
-                  animation-duration: 1.5s;
-                  animation-delay: 0.4s;
-                  animation-name: none;
-                "
-                action="https://formspree.io/f/mgedznqn"
-                method="post"
-              >
-                <div class="controls">
-                  <div class="row">
-                    <div class="col-lg-12 col-md-12">
-                      <div class="form-group has-error has-danger">
-                        <input
-                          id="form_name"
-                          type="text"
-                          name="name"
-                          placeholder="Your Name"
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12">
-                      <div class="form-group has-error has-danger">
-                        <input
-                          id="form_email"
-                          type="email"
-                          name="email"
-                          placeholder="Your Email Address"
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12">
-                      <div class="form-group has-error has-danger">
-                        <input
-                          id="form_subject"
-                          type="text"
-                          name="subject"
-                          placeholder="Your Subject"
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <textarea
-                          id="form_message"
-                          name="message"
-                          placeholder="Your Message"
-                          rows="4"
-                          required
-                        ></textarea>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <button
-                        type="submit"
-                        class="button"
-                        data-text="Send Message"
-                      >
-                        <span
-                          >Send Message <i class="fa fa-arrow-right"></i
-                        ></span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <footer class="footer-area">
-        <div class="copyright-area text-center">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <p>
-                  Copyright &copy;
-                  <script>
-                    document.write(new Date().getFullYear());
-                  </script>
-                  Created by Akalazu David
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-
-      <div class="lines">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+      <div class="menu__foot">
+        <a href="mailto:akalazuudochukwu@gmail.com">akalazuudochukwu@gmail.com</a>
+        <a href="./assets/My_Resume.pdf" download="Akalazu_David_CV.pdf">Download résumé ↓</a>
       </div>
     </div>
 
-    <a class="back-to-top back-to-top-pulse"><i class="fa fa-arrow-up"></i></a>
+    <main id="top">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero__glow" aria-hidden="true"></div>
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <div class="badge hero__badge">
+              <span class="pulse"></span> Available now · open to relocation &amp; remote
+            </div>
+            <h1 class="hero__title">
+              <span class="line">I build software</span>
+              <span class="line">people rely on</span>
+              <span class="line accent">every day.</span>
+            </h1>
+            <p class="hero__lead">
+              Backend-focused Software Engineer and Technical Project Manager. I design APIs, data
+              pipelines and multi-tenant SaaS for schools, businesses and creators across Nigeria,
+              and I own them all the way to production.
+            </p>
+            <div class="hero__cards">
+              <article class="mini-card">
+                <span class="icon-tile"><i data-lucide="server"></i></span>
+                <div><h3>Backend</h3><p>PHP, REST APIs, auth, caching and background jobs</p></div>
+              </article>
+              <article class="mini-card">
+                <span class="icon-tile"><i data-lucide="monitor"></i></span>
+                <div><h3>Frontend</h3><p>JavaScript, TypeScript and accessible React interfaces</p></div>
+              </article>
+              <article class="mini-card">
+                <span class="icon-tile"><i data-lucide="database"></i></span>
+                <div><h3>Databases</h3><p>MySQL schema design, indexing and query tuning</p></div>
+              </article>
+              <article class="mini-card">
+                <span class="icon-tile"><i data-lucide="clipboard-list"></i></span>
+                <div><h3>Delivery</h3><p>Specs, sprints and predictable releases as a TPM</p></div>
+              </article>
+            </div>
+          </div>
 
-    <script src="./assets/js/jquery-3.5.1.js"></script>
-    <!-- jquery-3 -->
-    <script src="./assets/js/plugins.js"></script>
-    <!-- plugins js -->
-    <script src="./assets/js/bootstrap.js"></script>
-    <!-- bootstrap js -->
+          <aside class="hire-card" aria-label="Work with me">
+            <h2>Work with me</h2>
+            <p class="hire-card__sub">Choose what you need, then let's talk details.</p>
+            <div class="role-tabs" role="tablist">
+              <button class="role-tab is-active" role="tab" aria-selected="true" data-role="0">
+                <i data-lucide="server"></i><span>Backend</span>
+              </button>
+              <button class="role-tab" role="tab" aria-selected="false" data-role="1">
+                <i data-lucide="layers"></i><span>Full-stack</span>
+              </button>
+              <button class="role-tab" role="tab" aria-selected="false" data-role="2">
+                <i data-lucide="clipboard-list"></i><span>Tech PM</span>
+              </button>
+              <button class="role-tab" role="tab" aria-selected="false" data-role="3">
+                <i data-lucide="graduation-cap"></i><span>Mentor</span>
+              </button>
+            </div>
 
-    <script src="./assets/js/owl.carousel.js"></script>
-    <!-- owl carousel -->
+            <div class="role-panels">
+              <div class="role-panel is-active" data-panel="0">
+                <label>What you get</label>
+                <p>APIs, data pipelines and multi-tenant SaaS backends in PHP and MySQL. Clean schemas, fast queries, sensible auth.</p>
+                <label>Stack</label>
+                <div class="chips"><span>PHP · OOP/MVC</span><span>REST APIs</span><span>MySQL</span><span>RBAC</span><span>Paystack</span></div>
+                <div class="role-stat"><i data-lucide="gauge"></i> 25% faster queries through indexing &amp; caching</div>
+              </div>
+              <div class="role-panel" data-panel="1">
+                <label>What you get</label>
+                <p>Complete features from database to UI, with JavaScript, TypeScript and React on the front end.</p>
+                <label>Stack</label>
+                <div class="chips"><span>React</span><span>TypeScript</span><span>PHP</span><span>MySQL</span><span>Fetch / Async</span></div>
+                <div class="role-stat"><i data-lucide="zap"></i> 30% faster page loads at Revna Biosciences</div>
+              </div>
+              <div class="role-panel" data-panel="2">
+                <label>What you get</label>
+                <p>Business requirements turned into specs developers can build from, and sprints that ship when they're supposed to.</p>
+                <label>Toolkit</label>
+                <div class="chips"><span>Sprint planning</span><span>Tech specs</span><span>Retros</span><span>Stakeholders</span></div>
+                <div class="role-stat"><i data-lucide="award"></i> Promoted to TPM at 30 Cycle</div>
+              </div>
+              <div class="role-panel" data-panel="3">
+                <label>What you get</label>
+                <p>Structured curricula and hands-on teaching, from JavaScript fundamentals to building real applications.</p>
+                <label>Toolkit</label>
+                <div class="chips"><span>JavaScript</span><span>Curriculum</span><span>Code review</span></div>
+                <div class="role-stat"><i data-lucide="trophy"></i> 75% of graduates hired as developers</div>
+              </div>
+            </div>
 
-    <script src="./assets/js/typed.js"></script>
-    <!-- type js -->
+            <a href="#contact" class="btn btn--primary btn--block magnetic">
+              Start a conversation <i data-lucide="arrow-right"></i>
+            </a>
+            <p class="hire-card__note">Based in Nigeria and available right away, remote or on-site.</p>
+            <div class="hire-card__foot">
+              <a class="pill" href="./assets/My_Resume.pdf" download="Akalazu_David_CV.pdf"><i data-lucide="file-text"></i>Résumé</a>
+              <a class="pill" href="https://github.com/Akalazu" target="_blank" rel="noopener"><i data-lucide="github"></i>GitHub</a>
+              <a class="pill" href="https://www.linkedin.com/in/akalazu-david-1b51861b4/" target="_blank" rel="noopener"><i data-lucide="linkedin"></i>LinkedIn</a>
+            </div>
+          </aside>
+        </div>
+        <div class="scroll-cue" aria-hidden="true"><span></span>Scroll</div>
+      </section>
 
-    <script src="./assets/js/wow.js"></script>
-    <!-- wow js -->
+      <!-- Marquee -->
+      <section class="marquee" aria-label="Technologies">
+        <div class="marquee__row">
+          <div class="marquee__track">
+            <span>PHP</span><b>✦</b><span>MySQL</span><b>✦</b><span>JavaScript</span><b>✦</b><span>TypeScript</span><b>✦</b><span>React</span><b>✦</b><span>REST APIs</span><b>✦</b><span>Multi-tenant SaaS</span><b>✦</b><span>RBAC</span><b>✦</b>
+          </div>
+        </div>
+        <div class="marquee__row marquee__row--alt">
+          <div class="marquee__track">
+            <span>Paystack</span><b>✦</b><span>Flutterwave</span><b>✦</b><span>SQLite</span><b>✦</b><span>Git &amp; GitHub</span><b>✦</b><span>Claude AI</span><b>✦</b><span>GitHub Copilot</span><b>✦</b><span>Agile delivery</span><b>✦</b><span>Root cause analysis</span><b>✦</b>
+          </div>
+        </div>
+      </section>
 
-    <script src="./assets/js/main.js"></script>
-    <!-- main js -->
+      <!-- Stats -->
+      <section class="stats container" aria-label="At a glance">
+        <div class="stat"><strong><span data-count="4">4</span>+</strong><p>Years shipping production software</p></div>
+        <div class="stat"><strong><span data-count="60">60</span>+</strong><p>Production issues owned and resolved</p></div>
+        <div class="stat"><strong><span data-count="4.75" data-decimals="2">4.75</span></strong><p>CGPA, best graduating student</p></div>
+        <div class="stat"><strong><span data-count="75">75</span>%</strong><p>Of my students hired as developers</p></div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="section about">
+        <div class="container about__grid">
+          <div class="about__media">
+            <div class="portrait">
+              <img src="./assets/image/david.jpg" alt="Portrait of Akalazu David" loading="lazy" />
+            </div>
+            <div class="float-badge">
+              <span class="icon-tile"><i data-lucide="award"></i></span>
+              <div><strong>Best Graduating Student</strong><small>Software Engineering, FUTO</small></div>
+            </div>
+          </div>
+          <div class="about__copy">
+            <div class="eyebrow"><span>01</span>About</div>
+            <p class="reveal-text">
+              I'm a backend-focused engineer with a record of shipping and owning features on live,
+              multi-tenant SaaS products. After consistently delivering as a backend engineer, I was
+              promoted to Technical Project Manager at 30 Cycle. I write clean PHP and JavaScript, think
+              carefully about database design, and take ownership seriously.
+            </p>
+            <dl class="facts">
+              <div><dt>Location</dt><dd>Nigeria, open to relocation</dd></div>
+              <div><dt>Availability</dt><dd>Immediate</dd></div>
+              <div><dt>Languages</dt><dd>English (fluent)</dd></div>
+              <div><dt>Interests</dt><dd>Open source, AI dev tooling, performance</dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="section skills">
+        <div class="container">
+          <div class="section-head">
+            <div class="eyebrow"><span>02</span>Toolkit</div>
+            <h2 class="split-title">The stack I <em>reach for.</em></h2>
+          </div>
+          <div class="skill-grid">
+            <article class="skill-card">
+              <span class="icon-tile"><i data-lucide="server"></i></span>
+              <h3>Backend</h3>
+              <ul><li>PHP (OOP, MVC)</li><li>REST API design &amp; versioning</li><li>Session &amp; token auth</li><li>Background processing</li><li>Server-side caching</li></ul>
+            </article>
+            <article class="skill-card">
+              <span class="icon-tile"><i data-lucide="monitor"></i></span>
+              <h3>Frontend</h3>
+              <ul><li>JavaScript (ES6+)</li><li>TypeScript</li><li>React.js</li><li>Async/Await &amp; Fetch</li><li>Responsive, accessible UI</li></ul>
+            </article>
+            <article class="skill-card">
+              <span class="icon-tile"><i data-lucide="database"></i></span>
+              <h3>Databases</h3>
+              <ul><li>MySQL schema design</li><li>Indexing &amp; query optimisation</li><li>Complex joins</li><li>Stored procedures</li><li>SQLite</li></ul>
+            </article>
+            <article class="skill-card">
+              <span class="icon-tile"><i data-lucide="network"></i></span>
+              <h3>System design</h3>
+              <ul><li>Multi-tenant SaaS</li><li>Role-based access control</li><li>Modular monolith</li><li>Paystack &amp; Flutterwave</li><li>Social media &amp; CRM APIs</li></ul>
+            </article>
+            <article class="skill-card">
+              <span class="icon-tile"><i data-lucide="git-branch"></i></span>
+              <h3>Engineering</h3>
+              <ul><li>Git &amp; GitHub</li><li>Production debugging</li><li>Root cause analysis</li><li>Technical documentation</li><li>Agile sprint delivery</li></ul>
+            </article>
+            <article class="skill-card">
+              <span class="icon-tile"><i data-lucide="sparkles"></i></span>
+              <h3>AI-augmented</h3>
+              <ul><li>Claude AI</li><li>GitHub Copilot</li><li>AI in daily development</li><li>Faster output, same quality bar</li></ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="section experience">
+        <div class="container">
+          <div class="section-head">
+            <div class="eyebrow"><span>03</span>Experience</div>
+            <h2 class="split-title">Where I've <em>shipped.</em></h2>
+          </div>
+          <div class="timeline">
+            <div class="timeline__line"><i></i></div>
+
+            <article class="job">
+              <span class="job__dot"></span>
+              <div class="job__card">
+                <header>
+                  <div>
+                    <h3>Technical Project Manager <span class="tag tag--green">Promoted</span></h3>
+                    <p class="job__co">30 Cycle</p>
+                  </div>
+                  <time>2025 — Present</time>
+                </header>
+                <p>Leads delivery of cross-platform creator analytics, influence scoring, audience insights and the SME/agency campaign portal for Africa's creator economy. Turns business requirements into developer-ready specs and introduced sprint planning, reviews and retros that made releases predictable.</p>
+                <p>Previously, as Backend Developer, architected the PHP + MySQL pipelines ingesting creator metrics from multiple social APIs and built the REST API layer behind the analytics dashboards.</p>
+                <div class="chips"><span>Delivery</span><span>Specs</span><span>PHP</span><span>MySQL</span><span>Social APIs</span></div>
+              </div>
+            </article>
+
+            <article class="job">
+              <span class="job__dot"></span>
+              <div class="job__card">
+                <header>
+                  <div><h3>Software Engineer</h3><p class="job__co">Edves</p></div>
+                  <time>2024 — 2026</time>
+                </header>
+                <p>Owned resolution of 60+ production issues on a multi-tenant school management SaaS serving hundreds of Nigerian schools: result rendering, score calculations, attendance, CBT, billing and mobile stability. Built dynamic end-of-term and mid-term report templates, improved the CBT module and enhanced the analytics dashboard.</p>
+                <div class="metrics"><div><strong>60+</strong><small>issues resolved</small></div><div><strong>100s</strong><small>of schools served</small></div></div>
+              </div>
+            </article>
+
+            <article class="job">
+              <span class="job__dot"></span>
+              <div class="job__card">
+                <header>
+                  <div><h3>Backend Developer</h3><p class="job__co">Pamtech Group</p></div>
+                  <time>2023 — 2025</time>
+                </header>
+                <p>Designed PHP/MySQL backend systems for oil &amp; gas operations used by 100+ people daily. Engineered an automated check-in/check-out system and a full auto-parts e-commerce platform.</p>
+                <div class="metrics"><div><strong>+20%</strong><small>workforce efficiency</small></div><div><strong>+15%</strong><small>Q1 revenue</small></div><div><strong>−25%</strong><small>query time</small></div></div>
+              </div>
+            </article>
+
+            <article class="job">
+              <span class="job__dot"></span>
+              <div class="job__card">
+                <header>
+                  <div><h3>Front-End Developer</h3><p class="job__co">Revna Biosciences · Accra, Ghana</p></div>
+                  <time>Feb — May 2024</time>
+                </header>
+                <p>Built responsive, accessible interfaces for biosciences platforms in React. Cut page load times through code splitting, lazy loading and asset optimisation.</p>
+                <div class="metrics"><div><strong>+30%</strong><small>page load speed</small></div></div>
+              </div>
+            </article>
+
+            <article class="job">
+              <span class="job__dot"></span>
+              <div class="job__card">
+                <header>
+                  <div><h3>Freelance Backend Developer</h3><p class="job__co">Independent consulting</p></div>
+                  <time>2022 — 2024</time>
+                </header>
+                <p>Delivered CMS builds, internal tools and API-integrated platforms across industries. Integrated Paystack, Flutterwave, CRMs and analytics APIs, and acted as sole technical contact: architecture, client communication and timelines.</p>
+                <div class="chips"><span>PHP</span><span>MySQL</span><span>Paystack</span><span>Flutterwave</span><span>CRM APIs</span></div>
+              </div>
+            </article>
+
+            <article class="job">
+              <span class="job__dot"></span>
+              <div class="job__card">
+                <header>
+                  <div><h3>JavaScript Instructor</h3><p class="job__co">STGEI International</p></div>
+                  <time>2020 — 2021</time>
+                </header>
+                <p>Designed and taught a structured JavaScript curriculum from fundamentals to full applications. Graduates moved into professional developer roles within months.</p>
+                <div class="metrics"><div><strong>75%</strong><small>graduate employment</small></div></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Work -->
+      <section id="work" class="work">
+        <div class="work__pin">
+          <div class="container work__head">
+            <div class="eyebrow"><span>04</span>Selected work</div>
+            <h2 class="split-title">Things I've <em>built.</em></h2>
+          </div>
+          <div class="work__track">
+            <!-- Gagner -->
+            <article class="project">
+              <div class="project__visual mock mock--school" aria-hidden="true">
+                <div class="mock__bar"><i></i><i></i><i></i><span>gagner.school/admin</span></div>
+                <div class="mock__body">
+                  <aside class="mock__side"><b></b><b class="on"></b><b></b><b></b><b></b></aside>
+                  <div class="mock__main">
+                    <div class="mock__roles"><span class="on">Student</span><span>Teacher</span><span>Admin</span><span>Super Admin</span></div>
+                    <div class="mock__tiles">
+                      <div><small>Students</small><strong>1,248</strong></div>
+                      <div><small>CBT today</small><strong>36</strong></div>
+                      <div><small>Fees paid</small><strong>82%</strong></div>
+                    </div>
+                    <div class="mock__chart"><i style="--h:45%"></i><i style="--h:70%"></i><i style="--h:55%"></i><i style="--h:88%"></i><i style="--h:64%"></i><i style="--h:92%"></i><i style="--h:76%"></i></div>
+                  </div>
+                </div>
+              </div>
+              <div class="project__info">
+                <span class="project__num">01</span>
+                <h3>Gagner for Schools</h3>
+                <p class="project__kicker">AI-powered school management SaaS</p>
+                <p>A multi-tenant platform that runs academic, administrative and financial operations for Nigerian schools. RBAC dashboards for four roles, CBT with automated results, PIN-based result access modelled on WAEC, plus AI adaptive quizzes and tutoring.</p>
+                <div class="chips"><span>PHP</span><span>JavaScript</span><span>MySQL</span><span>REST APIs</span><span>AI</span></div>
+              </div>
+            </article>
+
+            <!-- Trenvid -->
+            <article class="project">
+              <div class="project__visual mock mock--video" aria-hidden="true">
+                <div class="mock__bar"><i></i><i></i><i></i><span>trenvid.com/trending</span></div>
+                <div class="mock__body mock__body--col">
+                  <div class="mock__filters"><span class="on">All</span><span>YouTube</span><span>TikTok</span><span>Music</span></div>
+                  <div class="mock__videos">
+                    <div class="v v1"><i data-lucide="play"></i></div>
+                    <div class="v v2"><i data-lucide="play"></i></div>
+                    <div class="v v3"><i data-lucide="play"></i></div>
+                    <div class="v v4"><i data-lucide="play"></i></div>
+                    <div class="v v5"><i data-lucide="play"></i></div>
+                    <div class="v v6"><i data-lucide="play"></i></div>
+                  </div>
+                </div>
+              </div>
+              <div class="project__info">
+                <span class="project__num">02</span>
+                <h3>Trenvid</h3>
+                <p class="project__kicker">Trending video aggregation platform</p>
+                <p>Pulls trending videos from YouTube and TikTok in real time, with infinite scrolling, dynamic filtering and async loading. A custom multi-platform embed system handles third-party content with automatic fallbacks.</p>
+                <div class="chips"><span>JavaScript</span><span>PHP</span><span>MySQL</span><span>YouTube API</span><span>TikTok API</span></div>
+              </div>
+            </article>
+
+            <!-- 9jabrief -->
+            <article class="project">
+              <div class="project__visual mock mock--news" aria-hidden="true">
+                <div class="mock__bar"><i></i><i></i><i></i><span>9jabrief.com</span></div>
+                <div class="mock__body mock__body--col">
+                  <div class="mock__live"><span class="pulse"></span> Live · updated 4s ago</div>
+                  <div class="mock__news">
+                    <div><b></b><p><i></i><i></i></p></div>
+                    <div><b></b><p><i></i><i></i></p></div>
+                    <div><b></b><p><i></i><i></i></p></div>
+                  </div>
+                  <div class="mock__kpis"><span>99.9% uptime</span><span>+50% organic</span></div>
+                </div>
+              </div>
+              <div class="project__info">
+                <span class="project__num">03</span>
+                <h3>9jabrief</h3>
+                <p class="project__kicker">Real-time news aggregation</p>
+                <p>A news platform with under 5 seconds of content latency and personalised filtering that lifted discoverability 40% and retention 25%. Held 99.9% uptime through traffic surges, and SEO work grew organic traffic 50% in six months.</p>
+                <div class="chips"><span>PHP</span><span>MySQL</span><span>SEO</span><span>REST APIs</span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section id="education" class="section education">
+        <div class="container">
+          <div class="edu-card">
+            <div class="edu-ring">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <circle cx="60" cy="60" r="52" class="track" />
+                <circle cx="60" cy="60" r="52" class="fill" pathLength="1" />
+              </svg>
+              <div class="edu-ring__val"><strong><span data-count="4.75" data-decimals="2">4.75</span></strong><small>of 5.0 CGPA</small></div>
+            </div>
+            <div class="edu-copy">
+              <div class="eyebrow"><span>05</span>Education</div>
+              <h2>B.Tech, Software Engineering</h2>
+              <p class="edu-school">Federal University of Technology, Owerri · 2024</p>
+              <ul class="honors">
+                <li><i data-lucide="trophy"></i>Best Graduating Student, Dept. of Software Engineering</li>
+                <li><i data-lucide="award"></i>Best Performing Student, 3 consecutive sessions</li>
+                <li><i data-lucide="users"></i>Class Representative</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section contact">
+        <div class="container contact__grid">
+          <div class="contact__copy">
+            <div class="eyebrow"><span>06</span>Contact</div>
+            <h2 class="contact__title split-title">Let's build something that <em>ships.</em></h2>
+            <p class="contact__lead">Hiring for a backend, full-stack or technical PM role, or have a product that needs an owner? Tell me about it.</p>
+            <ul class="contact__list">
+              <li><span class="icon-tile"><i data-lucide="mail"></i></span><a href="mailto:akalazuudochukwu@gmail.com">akalazuudochukwu@gmail.com</a></li>
+              <li><span class="icon-tile"><i data-lucide="phone"></i></span><a href="https://wa.me/2349035946770" target="_blank" rel="noopener">+234 903 594 6770</a></li>
+              <li><span class="icon-tile"><i data-lucide="map-pin"></i></span><span>Nigeria · remote or relocation</span></li>
+            </ul>
+            <div class="socials">
+              <a class="social magnetic" href="https://github.com/Akalazu" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i></a>
+              <a class="social magnetic" href="https://www.linkedin.com/in/akalazu-david-1b51861b4/" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+              <a class="social magnetic" href="https://twitter.com/akalazud" target="_blank" rel="noopener" aria-label="X / Twitter"><i data-lucide="twitter"></i></a>
+              <a class="social magnetic" href="https://web.facebook.com/akalazu.david" target="_blank" rel="noopener" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            </div>
+          </div>
+
+          <form class="form-card" action="https://formspree.io/f/mgedznqn" method="POST">
+            <h3>Send a message</h3>
+            <p class="hire-card__sub">Pick a topic, then fill in your details.</p>
+            <div class="role-tabs role-tabs--3" role="radiogroup" aria-label="Topic">
+              <label class="role-tab is-active"><input type="radio" name="topic" value="Hiring" checked /><i data-lucide="briefcase"></i><span>Hiring</span></label>
+              <label class="role-tab"><input type="radio" name="topic" value="Project" /><i data-lucide="layers"></i><span>Project</span></label>
+              <label class="role-tab"><input type="radio" name="topic" value="Say hi" /><i data-lucide="message-circle"></i><span>Say hi</span></label>
+            </div>
+            <div class="field">
+              <label for="f-name">Name</label>
+              <input id="f-name" name="name" type="text" placeholder="e.g. Ada Okafor" required />
+            </div>
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" placeholder="you@company.com" required />
+            </div>
+            <div class="field">
+              <label for="f-msg">Message</label>
+              <textarea id="f-msg" name="message" rows="4" placeholder="What are you working on?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block magnetic">
+              <span class="btn__label">Send message</span> <i data-lucide="send"></i>
+            </button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__word" aria-hidden="true">Akalazu<b>.</b></div>
+        <div class="footer__row">
+          <span>© <span class="year">2026</span> Akalazu Udochukwu David</span>
+          <a href="#top" class="pill back-top"><i data-lucide="arrow-up"></i>Back to top</a>
+          <span>Built with <b>GSAP</b></span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="./assets/js/site.js"></script>
   </body>
 </html>
