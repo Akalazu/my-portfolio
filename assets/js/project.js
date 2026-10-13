@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Case-study pages — GSAP + ScrollTrigger + SplitText + Lenis
+   Case-study pages · GSAP + ScrollTrigger + SplitText + Lenis
    (self-contained; the homepage uses site.js)
    ========================================================================== */
 

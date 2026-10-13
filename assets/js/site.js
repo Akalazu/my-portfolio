@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Akalazu David — portfolio interactions (GSAP + ScrollTrigger + SplitText + Lenis)
+   Akalazu David · portfolio interactions (GSAP + ScrollTrigger + SplitText + Lenis)
    ========================================================================== */
 
 (() => {

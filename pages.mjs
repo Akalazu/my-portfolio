@@ -129,10 +129,10 @@ const page = (p, i) => {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>${esc(p.title)} — Case study | Akalazu David</title>
+    <title>${esc(p.title)} · Case study | Akalazu David</title>
     <meta name="description" content="${esc(p.lead)}" />
     <meta name="theme-color" content="#ffffff" />
-    <meta property="og:title" content="${esc(p.title)} — ${esc(p.kicker)}" />
+    <meta property="og:title" content="${esc(p.title)} · ${esc(p.kicker)}" />
     <meta property="og:description" content="${esc(p.lead)}" />
     <meta property="og:type" content="article" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23fff'/%3E%3Crect x='1' y='1' width='62' height='62' rx='15' fill='none' stroke='%23e6e8ee' stroke-width='2'/%3E%3Ctext x='16' y='45' font-family='Arial' font-weight='900' font-size='38' fill='%232b55e6'%3Ea%3C/text%3E%3Ccircle cx='47' cy='41' r='4.5' fill='%232b55e6'/%3E%3C/svg%3E" />
