@@ -1,104 +1,139 @@
 // Single source of truth for the work section on the homepage and the case-study pages.
 // Edit the copy here, then run `npm run pages` (or `npm run build`) to regenerate.
-// Everything below is drawn from the CV and the project screenshots — keep it factual.
+// Facts come from the live sites (gagnerapp.com, trenvid.com, 9jabrief.com, 30cycle.com)
+// and from the CV. Items marked [CV] are not visible on the public sites.
 
 export const projects = [
   {
     slug: "gagner-for-schools",
     title: "Gagner for Schools",
-    kicker: "AI-powered school management SaaS",
+    kicker: "AI infrastructure for schools",
     summary:
-      "A multi-tenant platform that runs academic, administrative and financial operations for Nigerian schools. RBAC dashboards for four roles, CBT with automated results, PIN-based result access modelled on WAEC, plus AI adaptive quizzes and tutoring.",
-    lead: "One platform for how a Nigerian school actually runs: learning, administration and finance in one place for students, parents and staff, with AI that helps learners understand more and takes routine work off teachers' desks.",
+      "AI infrastructure for Nigerian schools: school management, a parent portal, computer-based testing and a safety-first AI layer, with a tutor, quiz master and homework coach for students and drafting tools for teachers.",
+    lead: "AI infrastructure for schools. Learning, administration and finance in one place for students, parents and staff, with AI that helps learners understand more and takes routine work off teachers' desks.",
     chips: ["PHP", "JavaScript", "MySQL", "REST APIs", "AI"],
     image: "gagner-schools.jpg",
     imageAlt: "Gagner for Schools sign-in portal showing the student, parent, teacher and admin entry points",
+    links: [
+      ["Visit Gagner for Schools", "https://gagnerapp.com/schools"],
+      ["AI infrastructure", "https://gagnerapp.com/ai-infrastructure"],
+    ],
     meta: [
       ["Role", "Architecture & engineering"],
-      ["Focus", "Multi-tenant SaaS · RBAC · AI"],
+      ["Focus", "Multi-tenant SaaS · AI · school operations"],
       ["Stack", "PHP · JavaScript · MySQL · REST APIs"],
-      ["Built for", "Nigerian primary & secondary schools"],
+      ["Built for", "Nigerian schools, Pre-Nursery to SS3"],
     ],
     results: [
-      ["4", "Role-based dashboards"],
-      ["CBT", "With automated result processing"],
-      ["PIN", "Result access modelled on WAEC"],
-      ["AI", "Adaptive quizzes & tutoring"],
+      ["5", "Solutions in one platform"],
+      ["6", "AI systems for students"],
+      ["6", "AI tools for teachers & staff"],
+      ["4", "Audiences: students, parents, teachers, admins"],
     ],
     story: [
       {
         label: "The problem",
-        title: "Running a school means running six systems at once.",
-        body: "Lessons, assessments, attendance, fees, report cards and admissions usually live in separate tools. Teachers re-enter the same data and parents chase information. The goal was a single system any school could adopt, without any school ever seeing another school's data.",
+        title: "Schools run on spreadsheets, notebooks and manual work.",
+        body: "Admissions, attendance, fees, assessments and report cards usually live in separate places, and teachers carry the paperwork. Gagner for Schools replaces that patchwork with a single intelligence layer built around how Nigerian schools actually operate, not adapted from office software.",
       },
       {
         label: "The approach",
-        title: "One platform, many schools, one view per role.",
-        body: "I architected Gagner for Schools as a multi-tenant SaaS: a single platform serving many schools, each in its own isolated space. On top of it sit modular, role-based dashboards, so a student, teacher, admin and super admin each see exactly what their job needs and nothing more.",
+        title: "One shared intelligence layer, maintained centrally.",
+        body: "I architected the platform as a multi-tenant SaaS: each school gets its own space, while connecting to a shared layer that is maintained centrally. Curriculum understanding, safety rules and platform-wide learning are updated once and reach every school. The principle throughout is human-in-the-loop: the AI drafts, flags and explains, and teachers, parents and school leaders decide.",
       },
     ],
     highlightsTitle: "Engineering highlights",
     highlights: [
-      ["building-2", "Multi-tenant architecture", "One codebase serving many schools, with each school's data kept separate and secure."],
-      ["shield-check", "Role-based access control", "Modular dashboards for four roles (Student, Teacher, Admin and Super Admin) driven by permissions."],
-      ["file-text", "CBT with automated results", "Computer-based tests that are scored and processed automatically, so results don't wait on manual entry."],
-      ["key-round", "PIN-based result access", "Results are released through PINs, modelled on WAEC's infrastructure, a pattern families already understand."],
-      ["sparkles", "AI-driven learning", "Adaptive quizzes, intelligent tutoring, performance analytics and skill-based certification."],
-      ["smartphone", "Beyond the browser", "A school portal with admissions and recruitment entry points, plus a mobile app for everyday use."],
+      ["building-2", "Multi-tenant architecture", "Many schools on one platform, each with its own data, all benefiting from a shared, centrally maintained layer."],
+      ["book-open", "Curriculum built for Nigeria", "Content based on what Nigerian schools teach, from Pre-Nursery through SS3, across multiple exam bodies."],
+      ["layers", "School management", "Admissions, attendance, finance, staff and communication in one place."],
+      ["users", "Parent portal", "A single account for parents covering everything that happens in their child's school day."],
+      ["file-text", "Computer-based testing", "A question bank through to results, with automated result processing."],
+      ["shield-check", "An always-on safety layer", "Every student message and AI reply is checked; serious risk signals stop the conversation and alert adults. Schools cannot switch it off."],
+      ["key-round", "PIN-based result access", "Results are released through PINs modelled on WAEC's infrastructure."],
+      ["clipboard-list", "Audit trail", "A record of what was asked, what was returned and which student was involved."],
     ],
-    audiencesTitle: "Four audiences, one platform",
-    audiences: [
-      ["user", "Students", "Lessons, AI study help, quizzes and results."],
-      ["users", "Parents", "Fees, attendance and report cards for every child."],
-      ["graduation-cap", "Teachers", "Classes, assessments, scores and attendance."],
-      ["landmark", "Admins", "Admissions, finance, staff and school records."],
+    minis: [
+      {
+        title: "AI for students",
+        items: [
+          ["bot", "Study Buddy", "A curriculum-linked tutor that reads photos of handwritten problems and answers spoken questions."],
+          ["sparkles", "AI Quiz Master", "Personalised quizzes checked for accuracy, with a leaderboard across the network."],
+          ["compass", "Homework Coach", "Step-by-step help when a student is stuck, guiding the reasoning instead of handing over answers."],
+          ["lightbulb", "Idea Lab", "Answers open questions that no single subject covers, by voice or text."],
+          ["banknote", "Financial AI Analyst", "Answers questions about fees and spending from a school's live figures."],
+          ["heart-handshake", "Special needs support", "Built in from the start, not added later."],
+        ],
+      },
+      {
+        title: "AI for teachers and staff",
+        items: [
+          ["file-text", "Report card remarks", "Drafts comments limited to each student's actual records. Teachers review before they reach reports."],
+          ["bar-chart-3", "Result narratives", "A written term overview for every child."],
+          ["pen-line", "Assignment feedback", "Written feedback based on individual performance."],
+          ["graduation-cap", "Lesson plan assistant", "Suggests objectives, prior knowledge, vocabulary and evaluation questions."],
+          ["monitor", "Lesson slide generator", "Turns a lesson note into a slide deck and saves every version."],
+          ["list-checks", "Exam & quiz generation", "Builds question sets for CBT and admission exams, checked for accuracy."],
+        ],
+      },
     ],
     gallery: [
-      ["gagner-company.jpg", "Gagner company website: building intelligence from Africa for the world", "The wider Gagner brand: AI built for the places where better technology can create meaningful change."],
+      ["gagner-company.jpg", "Gagner company website: building intelligence from Africa for the world", "Gagner, the company behind the platform. Gagner for Schools is its first product, with Agriculture and Health planned next."],
     ],
   },
   {
     slug: "30-cycle",
     title: "30 Cycle",
-    kicker: "Creator analytics for Africa's creator economy",
+    kicker: "Unified creator intelligence",
     summary:
-      "Data infrastructure for Africa's creator economy: PHP + MySQL pipelines that ingest creator metrics from multiple social APIs, the REST layer behind the analytics dashboards, and the delivery leadership that shipped it.",
-    lead: "Unified creator intelligence, built for decision makers. The platform aggregates creator performance across key channels and presents it through one clear dashboard, so creators and brands can make decisions with confidence.",
+      "One analytics foundation for Africa's creator economy: creators, brands and agencies see cross-platform performance in a single dashboard, powered by the data pipelines and APIs I built and the delivery I now lead.",
+    lead: "Unified creator intelligence, built for decision makers. One analytics foundation, with tailored outcomes for creators, SMEs and agencies, so everyone in the creator economy can make decisions with confidence.",
     chips: ["PHP", "MySQL", "REST APIs", "Social APIs", "Delivery"],
     image: "30cycle.jpg",
-    imageAlt: "30 Cycle flagship product page: Creative Influence & Analytics Platform",
+    imageAlt: "30 Cycle flagship product: Creative Influence & Analytics Platform",
+    links: [["Visit 30 Cycle", "https://30cycle.com/solution/"]],
     meta: [
       ["Role", "Backend Developer, then Technical PM"],
       ["Focus", "Data pipelines · APIs · delivery"],
       ["Stack", "PHP · MySQL · REST APIs · Social media APIs"],
-      ["Product", "Creative Influence & Analytics Platform"],
+      ["Product", "Creative Influence & Analytics Platform (MVP)"],
     ],
     results: [
       ["4", "Analytics modules in the MVP"],
+      ["3", "Audiences: creators, SMEs and agencies"],
       ["REST", "API layer behind every dashboard"],
       ["Multi", "Social APIs feeding one pipeline"],
-      ["Sprint", "Planning, reviews & retros introduced"],
     ],
     story: [
       {
         label: "The problem",
         title: "Creator performance is scattered across platforms.",
-        body: "Followers live on one app, engagement on another, and there's no common yardstick. Brands, agencies and creators end up deciding on partial numbers. 30 Cycle's flagship product pulls those signals into one place and turns them into something a decision maker can read at a glance.",
+        body: "Followers live on one app and engagement on another, with no common yardstick. Brands shortlist creators on hype, agencies stitch together reports by hand, and creators struggle to show their real value. 30 Cycle builds data infrastructure for Africa's creator economy so all three can decide on consistent, comparable signals.",
       },
       {
         label: "My part",
         title: "From building the pipelines to leading the delivery.",
-        body: "I started as a backend developer: I architected the PHP + MySQL data pipelines that ingest creator metrics from multiple social APIs, and built the RESTful API layer that powers the analytics dashboards. After consistently delivering, I was promoted to Technical Project Manager, and now lead delivery across creator analytics, influence scoring, audience insights and the SME/agency campaign management portal.",
+        body: "I started as a backend developer: I architected the PHP + MySQL pipelines that ingest creator metrics from multiple social APIs, and built the RESTful API layer that powers the analytics dashboards. After consistently delivering, I was promoted to Technical Project Manager, and now lead delivery across creator analytics, influence scoring, audience insights and the SME/agency campaign management portal.",
       },
     ],
     highlightsTitle: "What the platform does",
     highlights: [
-      ["layers", "Cross-platform aggregation", "Creator performance pulled from multiple channels into a single, consistent view."],
+      ["layers", "Cross-platform aggregation", "Creator performance aggregated across key channels and presented through one clear dashboard."],
       ["trending-up", "Growth & engagement analytics", "Track how an audience grows and how it responds, over time."],
-      ["users", "Audience insights", "An overview of who a creator reaches, so partnerships can be matched with confidence."],
+      ["users", "Audience insights overview", "Understand who a creator reaches, to match partnerships with confidence."],
       ["bar-chart-3", "Content performance reporting", "See which content works, not just how many people follow."],
-      ["target", "Influence scoring", "A comparable score that gives brands a common way to evaluate creators."],
+      ["target", "Influence scoring", "A comparable measure that gives brands a common way to evaluate creators."],
       ["megaphone", "Campaign management portal", "A portal for SMEs and agencies to plan and manage creator campaigns."],
+    ],
+    minis: [
+      {
+        title: "Tailored outcomes for each audience",
+        items: [
+          ["sparkles", "Creators", "See which content formats drive growth, track engagement quality rather than volume, and build a performance story for brand deals."],
+          ["building-2", "SMEs and brands", "Shortlist creators on consistent, comparable signals, reduce wasted spend, and get clean reporting for management approvals."],
+          ["workflow", "Agencies", "Standardise reporting across creators and platforms, benchmark on one metric framework, and deliver clearer ROI narratives to clients."],
+        ],
+      },
     ],
     leadershipTitle: "How I led delivery",
     leadership: [
@@ -109,16 +144,17 @@ export const projects = [
   {
     slug: "9jabrief",
     title: "9jabrief",
-    kicker: "Real-time news aggregation",
+    kicker: "Nigerian news, in brief",
     summary:
-      "A news platform with under 5 seconds of content latency and personalised filtering that lifted discoverability 40% and retention 25%. Held 99.9% uptime through traffic surges, and SEO work grew organic traffic 50% in six months.",
-    lead: "News in brief. A fast, personalised news platform that gets stories in front of readers in under five seconds, and keeps working when a big story sends traffic surging.",
+      "A Nigerian news-in-brief platform that gathers headlines from leading outlets into one fast feed, with personalised filtering, SEO that grew organic traffic 50%, and 99.9% uptime through traffic surges.",
+    lead: "Latest Nigerian news, in brief. Short headlines and excerpts from the country's leading outlets, in one fast feed that stays up when a big story sends traffic surging.",
     chips: ["PHP", "MySQL", "SEO", "REST APIs"],
     image: "9jabrief.jpg",
-    imageAlt: "9jabrief homepage with a category rail: Top News, Sports, Entertainment, Politics, Business, Technology and Stories",
+    imageAlt: "9jabrief homepage with a category rail: Top News, Sports, Entertainment, Politics, Business, Technology and Stories/Gist",
+    links: [["Visit 9jabrief", "https://9jabrief.com/"]],
     meta: [
       ["Role", "Engineering & SEO"],
-      ["Focus", "Real-time content · personalisation · reliability"],
+      ["Focus", "Aggregation · personalisation · reliability"],
       ["Stack", "PHP · MySQL · SEO · REST APIs"],
       ["Built for", "Readers who want the news, briefly"],
     ],
@@ -132,46 +168,38 @@ export const projects = [
     story: [
       {
         label: "The problem",
-        title: "When a story breaks, everyone arrives at once.",
-        body: "Readers want what happened, right now, and only the parts they care about. That demands near-instant delivery, relevant filtering, and the reliability to hold up when traffic spikes, not just when it's quiet.",
+        title: "The news is everywhere, and nobody has time to chase it.",
+        body: "Nigerian readers follow many outlets, each with its own layout, ads and long articles. They want the headlines, from sources they trust, in one place, and they want it to be fast, especially when a big story breaks and everyone arrives at once.",
       },
       {
         label: "The approach",
-        title: "Fast by design, personal by default.",
-        body: "I built the platform around a real-time content pipeline with sub-5-second latency, then layered personalised filtering on top so every reader sees a feed that fits them. SEO was treated as a product feature from the start, not an afterthought.",
+        title: "A brief feed, fast by design.",
+        body: "9jabrief pulls headlines and short excerpts from leading Nigerian outlets and presents them as a clean, scannable feed, with each story crediting its source and linking out to read more. I built it around a real-time pipeline with sub-5-second content latency, layered personalised filtering on top, and treated SEO as a product feature from the start.",
       },
     ],
     highlightsTitle: "Engineering highlights",
     highlights: [
-      ["zap", "Sub-5-second content latency", "Stories reach readers in under five seconds from source."],
+      ["newspaper", "One feed, many outlets", "Headlines from outlets such as Punch, Premium Times, Vanguard, ThisDay, BusinessDay and Nairametrics, each clearly credited."],
+      ["layout-grid", "A feed built for scanning", "Headline, source, date, thumbnail and a short excerpt, with Read More for the full story."],
+      ["compass", "Category-first navigation", "A swipeable rail: Top News, Sports, Entertainment, Politics, Business, Technology and Stories/Gist."],
+      ["zap", "Sub-5-second latency", "Stories reach readers in under five seconds from the source."],
       ["filter", "Personalised filtering", "Improved content discoverability by 40% and boosted retention by 25%."],
       ["gauge", "Built for surges", "Sustained 99.9% uptime when traffic spiked."],
       ["search", "SEO as a feature", "Search improvements drove 50% organic traffic growth over six months."],
-      ["compass", "Category-first navigation", "A swipeable rail runs from Top News through Sports, Entertainment, Politics, Business and Technology to Stories/Gist."],
-      ["refresh-cw", "Always fresh", "Live article counts per section and one-tap refresh keep the feed current."],
+      ["user-check", "Accounts", "Sign in with Google or email, with refresh and load-more controls to keep the feed current."],
     ],
   },
   {
     slug: "trenvid",
     title: "Trenvid",
-    kicker: "Trending video aggregation platform",
+    kicker: "Trending videos for entertainment & enlightenment",
     summary:
-      "Pulls trending videos from YouTube and TikTok in real time, with infinite scrolling, dynamic filtering and async loading. A custom multi-platform embed system handles third-party content with automatic fallbacks.",
-    lead: "A high-performance aggregator that pulls trending videos from YouTube and TikTok in real time, and lets people browse them in one endless, filterable feed.",
+      "A trending-video discovery site: 20 categories, a YouTube / TikTok / Facebook switcher, infinite scrolling and a custom embed system with automatic fallbacks.",
+    lead: "Trending videos for your entertainment and enlightenment. One place to browse what people are watching, sorted into 20 categories and switchable between YouTube, TikTok and Facebook.",
     chips: ["JavaScript", "PHP", "MySQL", "YouTube API", "TikTok API"],
-    mock: `<div class="mock__bar"><i></i><i></i><i></i><span>Trenvid · Trending</span></div>
-                <div class="mock__body mock__body--col">
-                  <div class="mock__filters"><span class="on">All</span><span>YouTube</span><span>TikTok</span><span>Music</span></div>
-                  <div class="mock__videos">
-                    <div class="v v1"><i data-lucide="play"></i></div>
-                    <div class="v v2"><i data-lucide="play"></i></div>
-                    <div class="v v3"><i data-lucide="play"></i></div>
-                    <div class="v v4"><i data-lucide="play"></i></div>
-                    <div class="v v5"><i data-lucide="play"></i></div>
-                    <div class="v v6"><i data-lucide="play"></i></div>
-                  </div>
-                </div>`,
-    mockClass: "mock--video",
+    image: "trenvid.jpg",
+    imageAlt: "Trenvid homepage showing 20 video categories and a YouTube, TikTok and Facebook switcher above trending videos",
+    links: [["Visit Trenvid", "https://trenvid.com/"]],
     meta: [
       ["Role", "Engineering"],
       ["Focus", "Aggregation · async loading · embeds"],
@@ -179,31 +207,33 @@ export const projects = [
       ["Platform", "Web"],
     ],
     results: [
-      ["2", "Platforms in a single feed"],
-      ["Live", "Trending data, in real time"],
+      ["20", "Content categories"],
+      ["3", "Platforms: YouTube, TikTok, Facebook"],
       ["∞", "Infinite-scrolling feed"],
       ["Auto", "Fallbacks on every embed"],
     ],
     story: [
       {
         label: "The problem",
-        title: "Trending lives in too many places.",
-        body: "What's trending on YouTube isn't what's trending on TikTok, and checking both means switching apps and losing the thread. The aim was one place to see what people are watching right now, fast enough that browsing never feels like waiting.",
+        title: "Good videos are hard to find, and scattered across platforms.",
+        body: "What's trending on YouTube isn't what's trending on TikTok or Facebook, and finding something worth watching means switching apps and scrolling through noise. The goal was one place to discover trending videos by what you're in the mood for, fast enough that browsing never feels like waiting.",
       },
       {
         label: "The approach",
-        title: "Pull in real time, load without blocking.",
-        body: "Trenvid fetches trending videos from both platforms in real time and streams them into an infinite-scrolling feed with dynamic filtering. Content loads asynchronously, so the page stays responsive however far someone scrolls.",
+        title: "Categories first, then load without blocking.",
+        body: "Trenvid sorts trending videos into 20 categories, from Comedy and Music to Business, Faith and Skills/Learning, and lets visitors switch platform in one tap. Content loads asynchronously into an infinite-scrolling feed, and a custom embed system handles third-party players with automatic fallbacks so a failing embed never breaks the page.",
       },
     ],
     highlightsTitle: "Engineering highlights",
     highlights: [
-      ["radio", "Real-time aggregation", "Trending videos pulled live from YouTube and TikTok."],
-      ["infinity", "Infinite scrolling", "A continuous feed that keeps loading as you browse."],
-      ["filter", "Dynamic filtering", "Narrow the feed instantly without reloading the page."],
-      ["repeat", "Asynchronous loading", "Content is fetched in the background so the interface never blocks."],
+      ["layout-grid", "20 content categories", "Comedy, Business/Finance, Motivational, Documentary, Movies, Music, Sports, Science/Tech, Skills/Learning and more."],
+      ["repeat", "Platform switcher", "Move between YouTube, TikTok and Facebook without leaving the page."],
       ["plug", "Custom multi-platform embed system", "One embed layer across platforms, with automatic fallbacks when a third-party player fails."],
-      ["shield-check", "Controlled third-party content", "Third-party content is handled deliberately, not dropped straight into the page."],
+      ["infinity", "Infinite scrolling", "A continuous feed that keeps loading as you browse, with asynchronous loading so the interface never blocks."],
+      ["radio", "Real-time aggregation", "Trending videos pulled in real time from the platforms."],
+      ["user-check", "Accounts", "Sign in with YouTube, TikTok, Facebook or email."],
+      ["share-2", "Share a video", "Visitors can submit videos to the platform."],
+      ["megaphone", "Advertiser accounts", "A route for brands to advertise, with an upgrade path to an advertiser account."],
     ],
   },
 ];

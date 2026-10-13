@@ -106,6 +106,7 @@
       .from(title.chars, { yPercent: 115, rotation: 7, duration: 1.2, stagger: 0.02 }, 0.55)
       .from(".pj-kicker", { y: 30, autoAlpha: 0, duration: 0.9 }, 0.95)
       .from(".pj-lead", { y: 30, autoAlpha: 0, duration: 0.9 }, 1.05)
+      .from(".pj-links .pill", { y: 20, autoAlpha: 0, duration: 0.8, stagger: 0.08 }, 1.15)
       .from(".pj-meta div", { y: 24, autoAlpha: 0, duration: 0.8, stagger: 0.08 }, 1.15)
       .from(".pj-frame", { y: 120, autoAlpha: 0, duration: 1.4 }, 1.1);
 
@@ -296,15 +297,15 @@
       });
     });
 
-    if ($(".pj-audiences")) {
-      gsap.from(".pj-audiences .mini-card", {
+    $$(".pj-minis").forEach((grid) => {
+      gsap.from($$(".mini-card", grid), {
         y: 40,
         autoAlpha: 0,
         duration: 0.9,
-        stagger: 0.1,
-        scrollTrigger: { trigger: ".pj-audiences", start: "top 85%" },
+        stagger: 0.08,
+        scrollTrigger: { trigger: grid, start: "top 88%" },
       });
-    }
+    });
 
     /* ---------- Gallery ---------- */
 

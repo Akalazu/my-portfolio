@@ -69,9 +69,13 @@
 
   // Topic radios in the contact form
   const form = $(".form-card");
-  const topicTabs = $$(".form-card .role-tab");
+  const topicTabs = $$(".form-card .topic-select label");
   function syncTopics() {
-    topicTabs.forEach((t) => t.classList.toggle("is-active", t.querySelector("input").checked));
+    topicTabs.forEach((t) => {
+      const input = t.querySelector("input");
+      t.classList.toggle("is-active", input.checked);
+      if (input.checked) $("#f-msg").placeholder = input.dataset.hint;
+    });
   }
   topicTabs.forEach((t) => t.querySelector("input").addEventListener("change", syncTopics));
 
@@ -731,21 +735,10 @@
       scrollTrigger: { trigger: ".socials", start: "top 92%" },
     });
     gsap.from(".form-card", {
-      y: 90,
-      rotationX: -14,
-      transformPerspective: 1200,
-      transformOrigin: "50% 100%",
+      y: 40,
       autoAlpha: 0,
-      duration: 1.3,
-      ease: "power4.out",
-      scrollTrigger: { trigger: ".form-card", start: "top 85%" },
-    });
-    gsap.from(".form-card .role-tab, .form-card .field", {
-      y: 24,
-      autoAlpha: 0,
-      duration: 0.7,
-      stagger: 0.06,
-      delay: 0.35,
+      duration: 0.9,
+      ease: "power3.out",
       scrollTrigger: { trigger: ".form-card", start: "top 85%" },
     });
 

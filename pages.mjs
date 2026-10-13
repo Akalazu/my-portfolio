@@ -158,6 +158,18 @@ ${nav(R)}
         <h1 class="pj-title">${esc(p.title)}</h1>
         <p class="pj-kicker">${esc(p.kicker)}</p>
         <p class="pj-lead">${esc(p.lead)}</p>
+        ${
+          p.links
+            ? `<div class="pj-links">
+          ${p.links
+            .map(
+              ([label, href], k) =>
+                `<a class="pill ${k === 0 ? "pill--dark " : ""}magnetic" href="${esc(href)}" target="_blank" rel="noopener"><span>${esc(label)}</span><i data-lucide="arrow-up-right"></i></a>`
+            )
+            .join("\n          ")}
+        </div>`
+            : ""
+        }
         <dl class="pj-meta">
           ${p.meta.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("\n          ")}
         </dl>
@@ -209,15 +221,17 @@ ${nav(R)}
         </div>
       </section>
 ${
-  p.audiences
-    ? `
-      <!-- Audiences -->
+  p.minis
+    ? p.minis
+        .map(
+          (g) => `
+      <!-- ${esc(g.title)} -->
       <section class="pj-section container">
         <div class="section-head">
-          <div class="eyebrow">${esc(p.audiencesTitle)}</div>
+          <div class="eyebrow">${esc(g.title)}</div>
         </div>
-        <div class="pj-audiences">
-          ${p.audiences
+        <div class="pj-minis">
+          ${g.items
             .map(
               ([icon, t, d]) => `<article class="mini-card">
             <span class="icon-tile"><i data-lucide="${icon}"></i></span>
@@ -228,6 +242,8 @@ ${
         </div>
       </section>
 `
+        )
+        .join("")
     : ""
 }${
   p.leadership

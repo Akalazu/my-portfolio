@@ -779,6 +779,50 @@ svg.lucide {
   box-shadow: var(--shadow-card);
 }
 
+.topic-select {
+  display: flex;
+  gap: 4px;
+  margin: 20px 0 24px;
+  padding: 4px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.topic-select label {
+  position: relative;
+  flex: 1;
+  padding: 9px 12px;
+  border-radius: 999px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.topic-select input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.topic-select label:hover {
+  color: var(--ink);
+}
+
+.topic-select label.is-active {
+  background: var(--blue-soft);
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.topic-select label:has(input:focus-visible) {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
 .hire-card {
   transform-style: preserve-3d;
   will-change: transform;
@@ -2527,14 +2571,21 @@ svg.lucide {
   line-height: 1.7;
 }
 
-.pj-audiences {
+.pj-minis {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
   gap: 16px;
 }
 
-.pj-audiences .mini-card {
+.pj-minis .mini-card {
   flex-direction: column;
+}
+
+.pj-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
 }
 
 .pj-lead-grid {
@@ -2657,9 +2708,6 @@ svg.lucide {
   .pj-meta {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .pj-audiences {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (max-width: 900px) {
@@ -2683,8 +2731,7 @@ svg.lucide {
 }
 
 @media (max-width: 640px) {
-  .pj-meta,
-  .pj-audiences {
+  .pj-meta {
     grid-template-columns: minmax(0, 1fr);
   }
   .pj-stat {

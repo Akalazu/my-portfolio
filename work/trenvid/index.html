@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trenvid — Case study | Akalazu David</title>
-    <meta name="description" content="A high-performance aggregator that pulls trending videos from YouTube and TikTok in real time, and lets people browse them in one endless, filterable feed." />
+    <meta name="description" content="Trending videos for your entertainment and enlightenment. One place to browse what people are watching, sorted into 20 categories and switchable between YouTube, TikTok and Facebook." />
     <meta name="theme-color" content="#ffffff" />
-    <meta property="og:title" content="Trenvid — Trending video aggregation platform" />
-    <meta property="og:description" content="A high-performance aggregator that pulls trending videos from YouTube and TikTok in real time, and lets people browse them in one endless, filterable feed." />
+    <meta property="og:title" content="Trenvid — Trending videos for entertainment &amp; enlightenment" />
+    <meta property="og:description" content="Trending videos for your entertainment and enlightenment. One place to browse what people are watching, sorted into 20 categories and switchable between YouTube, TikTok and Facebook." />
     <meta property="og:type" content="article" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23fff'/%3E%3Crect x='1' y='1' width='62' height='62' rx='15' fill='none' stroke='%23e6e8ee' stroke-width='2'/%3E%3Ctext x='16' y='45' font-family='Arial' font-weight='900' font-size='38' fill='%232b55e6'%3Ea%3C/text%3E%3Ccircle cx='47' cy='41' r='4.5' fill='%232b55e6'/%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -73,8 +73,11 @@
         <a class="pj-back" href="../../#work" data-transition><i data-lucide="arrow-left"></i>All work</a>
         <div class="eyebrow"><span>04</span>Case study</div>
         <h1 class="pj-title">Trenvid</h1>
-        <p class="pj-kicker">Trending video aggregation platform</p>
-        <p class="pj-lead">A high-performance aggregator that pulls trending videos from YouTube and TikTok in real time, and lets people browse them in one endless, filterable feed.</p>
+        <p class="pj-kicker">Trending videos for entertainment &amp; enlightenment</p>
+        <p class="pj-lead">Trending videos for your entertainment and enlightenment. One place to browse what people are watching, sorted into 20 categories and switchable between YouTube, TikTok and Facebook.</p>
+        <div class="pj-links">
+          <a class="pill pill--dark magnetic" href="https://trenvid.com/" target="_blank" rel="noopener"><span>Visit Trenvid</span><i data-lucide="arrow-up-right"></i></a>
+        </div>
         <dl class="pj-meta">
           <div><dt>Role</dt><dd>Engineering</dd></div>
           <div><dt>Focus</dt><dd>Aggregation · async loading · embeds</dd></div>
@@ -86,26 +89,16 @@
       <!-- Hero visual -->
       <section class="pj-visual container" aria-label="Trenvid preview">
         <div class="pj-glow" aria-hidden="true"></div>
-        <div class="pj-frame mock mock--video" role="img" aria-label="Illustration of the Trenvid interface">
-          <div class="mock__bar"><i></i><i></i><i></i><span>Trenvid · Trending</span></div>
-                <div class="mock__body mock__body--col">
-                  <div class="mock__filters"><span class="on">All</span><span>YouTube</span><span>TikTok</span><span>Music</span></div>
-                  <div class="mock__videos">
-                    <div class="v v1"><i data-lucide="play"></i></div>
-                    <div class="v v2"><i data-lucide="play"></i></div>
-                    <div class="v v3"><i data-lucide="play"></i></div>
-                    <div class="v v4"><i data-lucide="play"></i></div>
-                    <div class="v v5"><i data-lucide="play"></i></div>
-                    <div class="v v6"><i data-lucide="play"></i></div>
-                  </div>
-                </div>
-        </div>
+        <figure class="pj-frame mock shot">
+          <div class="mock__bar"><i></i><i></i><i></i></div>
+          <img src="../../assets/image/trenvid.jpg" alt="Trenvid homepage showing 20 video categories and a YouTube, TikTok and Facebook switcher above trending videos" width="1800" height="1042" decoding="async" />
+        </figure>
       </section>
 
       <!-- Results -->
       <section class="pj-results container" aria-label="Key results">
-        <div class="pj-stat"><strong><span data-count="2">2</span></strong><p>Platforms in a single feed</p></div>
-        <div class="pj-stat"><strong>Live</strong><p>Trending data, in real time</p></div>
+        <div class="pj-stat"><strong><span data-count="20">20</span></strong><p>Content categories</p></div>
+        <div class="pj-stat"><strong><span data-count="3">3</span></strong><p>Platforms: YouTube, TikTok, Facebook</p></div>
         <div class="pj-stat"><strong>∞</strong><p>Infinite-scrolling feed</p></div>
         <div class="pj-stat"><strong>Auto</strong><p>Fallbacks on every embed</p></div>
       </section>
@@ -115,15 +108,15 @@
         <div class="pj-block">
           <div class="pj-block__label"><div class="eyebrow">The problem</div></div>
           <div class="pj-block__body">
-            <h2>Trending lives in too many places.</h2>
-            <p>What's trending on YouTube isn't what's trending on TikTok, and checking both means switching apps and losing the thread. The aim was one place to see what people are watching right now, fast enough that browsing never feels like waiting.</p>
+            <h2>Good videos are hard to find, and scattered across platforms.</h2>
+            <p>What's trending on YouTube isn't what's trending on TikTok or Facebook, and finding something worth watching means switching apps and scrolling through noise. The goal was one place to discover trending videos by what you're in the mood for, fast enough that browsing never feels like waiting.</p>
           </div>
         </div>
         <div class="pj-block">
           <div class="pj-block__label"><div class="eyebrow">The approach</div></div>
           <div class="pj-block__body">
-            <h2>Pull in real time, load without blocking.</h2>
-            <p>Trenvid fetches trending videos from both platforms in real time and streams them into an infinite-scrolling feed with dynamic filtering. Content loads asynchronously, so the page stays responsive however far someone scrolls.</p>
+            <h2>Categories first, then load without blocking.</h2>
+            <p>Trenvid sorts trending videos into 20 categories, from Comedy and Music to Business, Faith and Skills/Learning, and lets visitors switch platform in one tap. Content loads asynchronously into an infinite-scrolling feed, and a custom embed system handles third-party players with automatic fallbacks so a failing embed never breaks the page.</p>
           </div>
         </div>
       </section>
@@ -135,24 +128,14 @@
         </div>
         <div class="skill-grid pj-grid">
             <article class="skill-card pj-feature ">
-              <span class="icon-tile"><i data-lucide="radio"></i></span>
-              <h3>Real-time aggregation</h3>
-              <p>Trending videos pulled live from YouTube and TikTok.</p>
-            </article>
-            <article class="skill-card pj-feature ">
-              <span class="icon-tile"><i data-lucide="infinity"></i></span>
-              <h3>Infinite scrolling</h3>
-              <p>A continuous feed that keeps loading as you browse.</p>
-            </article>
-            <article class="skill-card pj-feature ">
-              <span class="icon-tile"><i data-lucide="filter"></i></span>
-              <h3>Dynamic filtering</h3>
-              <p>Narrow the feed instantly without reloading the page.</p>
+              <span class="icon-tile"><i data-lucide="layout-grid"></i></span>
+              <h3>20 content categories</h3>
+              <p>Comedy, Business/Finance, Motivational, Documentary, Movies, Music, Sports, Science/Tech, Skills/Learning and more.</p>
             </article>
             <article class="skill-card pj-feature ">
               <span class="icon-tile"><i data-lucide="repeat"></i></span>
-              <h3>Asynchronous loading</h3>
-              <p>Content is fetched in the background so the interface never blocks.</p>
+              <h3>Platform switcher</h3>
+              <p>Move between YouTube, TikTok and Facebook without leaving the page.</p>
             </article>
             <article class="skill-card pj-feature ">
               <span class="icon-tile"><i data-lucide="plug"></i></span>
@@ -160,9 +143,29 @@
               <p>One embed layer across platforms, with automatic fallbacks when a third-party player fails.</p>
             </article>
             <article class="skill-card pj-feature ">
-              <span class="icon-tile"><i data-lucide="shield-check"></i></span>
-              <h3>Controlled third-party content</h3>
-              <p>Third-party content is handled deliberately, not dropped straight into the page.</p>
+              <span class="icon-tile"><i data-lucide="infinity"></i></span>
+              <h3>Infinite scrolling</h3>
+              <p>A continuous feed that keeps loading as you browse, with asynchronous loading so the interface never blocks.</p>
+            </article>
+            <article class="skill-card pj-feature ">
+              <span class="icon-tile"><i data-lucide="radio"></i></span>
+              <h3>Real-time aggregation</h3>
+              <p>Trending videos pulled in real time from the platforms.</p>
+            </article>
+            <article class="skill-card pj-feature ">
+              <span class="icon-tile"><i data-lucide="user-check"></i></span>
+              <h3>Accounts</h3>
+              <p>Sign in with YouTube, TikTok, Facebook or email.</p>
+            </article>
+            <article class="skill-card pj-feature ">
+              <span class="icon-tile"><i data-lucide="share-2"></i></span>
+              <h3>Share a video</h3>
+              <p>Visitors can submit videos to the platform.</p>
+            </article>
+            <article class="skill-card pj-feature ">
+              <span class="icon-tile"><i data-lucide="megaphone"></i></span>
+              <h3>Advertiser accounts</h3>
+              <p>A route for brands to advertise, with an upgrade path to an advertiser account.</p>
             </article>
         </div>
       </section>
@@ -172,7 +175,7 @@
         <a class="pj-next__link" href="../../work/gagner-for-schools/" data-transition>
           <span class="pj-next__label">Next project · 01</span>
           <span class="pj-next__title">Gagner for Schools</span>
-          <span class="pj-next__kicker">AI-powered school management SaaS</span>
+          <span class="pj-next__kicker">AI infrastructure for schools</span>
           <span class="pj-next__arrow"><i data-lucide="arrow-right"></i></span>
         </a>
       </section>
