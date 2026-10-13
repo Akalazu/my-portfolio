@@ -554,15 +554,15 @@
         scrollTrigger: { trigger: ".portrait", start: "top bottom", end: "bottom top", scrub: true },
       }
     );
-    gsap.from(".float-badge", {
-      x: 60,
+    gsap.from(".portrait__caption > *, .portrait__tag", {
+      y: 20,
       autoAlpha: 0,
-      duration: 1.2,
-      ease: "power4.out",
-      delay: 0.5,
+      duration: 0.9,
+      stagger: 0.1,
+      ease: "power3.out",
+      delay: 0.9,
       scrollTrigger: { trigger: ".about", start: "top 70%" },
     });
-    gsap.to(".float-badge", { y: -14, duration: 2.4, ease: "sine.inOut", yoyo: true, repeat: -1 });
 
     const about = split(".reveal-text", { type: "words" });
     gsap.fromTo(
