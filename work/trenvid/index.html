@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trenvid — Case study | Akalazu David</title>
+    <meta name="description" content="A high-performance aggregator that pulls trending videos from YouTube and TikTok in real time, and lets people browse them in one endless, filterable feed." />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:title" content="Trenvid — Trending video aggregation platform" />
+    <meta property="og:description" content="A high-performance aggregator that pulls trending videos from YouTube and TikTok in real time, and lets people browse them in one endless, filterable feed." />
+    <meta property="og:type" content="article" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23fff'/%3E%3Crect x='1' y='1' width='62' height='62' rx='15' fill='none' stroke='%23e6e8ee' stroke-width='2'/%3E%3Ctext x='16' y='45' font-family='Arial' font-weight='900' font-size='38' fill='%232b55e6'%3Ea%3C/text%3E%3Ccircle cx='47' cy='41' r='4.5' fill='%232b55e6'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/site.css" />
+    <script>
+      document.documentElement.classList.replace("no-js", "js");
+      try { if (sessionStorage.getItem("intro")) document.documentElement.classList.add("seen"); } catch (e) {}
+      if (/\/index\.html$/.test(location.pathname)) {
+        history.replaceState(null, "", location.pathname.replace(/index\.html$/, "") + location.search + location.hash);
+      }
+    </script>
+  </head>
+  <body class="page-project">
+    <div class="curtain curtain--cover" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"><div class="cursor__dot"></div><div class="cursor__ring"></div></div>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="nav">
+      <div class="container nav__inner">
+        <a href="../../" data-transition class="brand" aria-label="Akalazu David, home">
+          <span class="brand__mark">a<i>.</i></span>
+          <span class="brand__text">
+            <strong>Akalazu David</strong>
+            <small>Software Engineer · Technical PM</small>
+          </span>
+        </a>
+        <nav class="nav__links" aria-label="Primary">
+          <a href="../../#about" data-transition>About</a>
+          <a href="../../#experience" data-transition>Experience</a>
+          <a href="../../#work" data-transition class="is-active">Work</a>
+          <a href="../../#contact" data-transition>Contact</a>
+        </nav>
+        <div class="nav__actions">
+          <a class="pill magnetic" href="../../assets/My_Resume.pdf" download="Akalazu_David_CV.pdf">
+            <i data-lucide="download"></i><span>Résumé</span>
+          </a>
+          <a class="pill pill--dark magnetic" href="../../#contact">
+            <span>Let's talk</span><i data-lucide="arrow-right"></i>
+          </a>
+          <button class="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+        </div>
+      </div>
+    </header>
+
+    <div class="menu" aria-hidden="true">
+      <nav class="menu__links">
+        <a href="../../#about" data-transition><small>01</small>About</a>
+        <a href="../../#experience" data-transition><small>02</small>Experience</a>
+        <a href="../../#work" data-transition><small>03</small>Work</a>
+        <a href="../../#contact" data-transition><small>04</small>Contact</a>
+      </nav>
+      <div class="menu__foot">
+        <a href="mailto:akalazuudochukwu@gmail.com">akalazuudochukwu@gmail.com</a>
+        <a href="../../assets/My_Resume.pdf" download="Akalazu_David_CV.pdf">Download résumé ↓</a>
+      </div>
+    </div>
+
+    <main id="top">
+      <!-- Header -->
+      <header class="pj-hero container">
+        <a class="pj-back" href="../../#work" data-transition><i data-lucide="arrow-left"></i>All work</a>
+        <div class="eyebrow"><span>04</span>Case study</div>
+        <h1 class="pj-title">Trenvid</h1>
+        <p class="pj-kicker">Trending video aggregation platform</p>
+        <p class="pj-lead">A high-performance aggregator that pulls trending videos from YouTube and TikTok in real time, and lets people browse them in one endless, filterable feed.</p>
+        <dl class="pj-meta">
+          <div><dt>Role</dt><dd>Engineering</dd></div>
+          <div><dt>Focus</dt><dd>Aggregation · async loading · embeds</dd></div>
+          <div><dt>Stack</dt><dd>JavaScript · PHP · MySQL · YouTube &amp; TikTok APIs</dd></div>
+          <div><dt>Platform</dt><dd>Web</dd></div>
+        </dl>
+      </header>
+
+      <!-- Hero visual -->
+      <section class="pj-visual container" aria-label="Trenvid preview">
+        <div class="pj-glow" aria-hidden="true"></div>
+        <div class="pj-frame mock mock--video" role="img" aria-label="Illustration of the Trenvid interface">
+          <div class="mock__bar"><i></i><i></i><i></i><span>Trenvid · Trending</span></div>
+                <div class="mock__body mock__body--col">
+                  <div class="mock__filters"><span class="on">All</span><span>YouTube</span><span>TikTok</span><span>Music</span></div>
+                  <div class="mock__videos">
+                    <div class="v v1"><i data-lucide="play"></i></div>
+                    <div class="v v2"><i data-lucide="play"></i></div>
+                    <div class="v v3"><i data-lucide="play"></i></div>
+                    <div class="v v4"><i data-lucide="play"></i></div>
+                    <div class="v v5"><i data-lucide="play"></i></div>
+                    <div class="v v6"><i data-lucide="play"></i></div>
+                  </div>
+                </div>
+        </div>
+      </section>
+
+      <!-- Results -->
+      <section class="pj-results container" aria-label="Key results">
+        <div class="pj-stat"><strong><span data-count="2">2</span></strong><p>Platforms in a single feed</p></div>
+        <div class="pj-stat"><strong>Live</strong><p>Trending data, in real time</p></div>
+        <div class="pj-stat"><strong>∞</strong><p>Infinite-scrolling feed</p></div>
+        <div class="pj-stat"><strong>Auto</strong><p>Fallbacks on every embed</p></div>
+      </section>
+
+      <!-- Story -->
+      <section class="pj-story container">
+        <div class="pj-block">
+          <div class="pj-block__label"><div class="eyebrow">The problem</div></div>
+          <div class="pj-block__body">
+            <h2>Trending lives in too many places.</h2>
+            <p>What's trending on YouTube isn't what's trending on TikTok, and checking both means switching apps and losing the thread. The aim was one place to see what people are watching right now, fast enough that browsing never feels like waiting.</p>
+          </div>
+        </div>
+        <div class="pj-block">
+          <div class="pj-block__label"><div class="eyebrow">The approach</div></div>
+          <div class="pj-block__body">
+            <h2>Pull in real time, load without blocking.</h2>
+            <p>Trenvid fetches trending videos from both platforms in real time and streams them into an infinite-scrolling feed with dynamic filtering. Content loads asynchronously, so the page stays responsive however far someone scrolls.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Highlights -->
+      <section class="pj-section container">
+        <div class="section-head">
+          <div class="eyebrow">Engineering highlights</div>
+        </div>
+        <div class="skill-grid pj-grid">
+            <article class="skill-card pj-feature ">
+              <span class="icon-tile"><i data-lucide="radio"></i></span>
+              <h3>Real-time aggregation</h3>
+              <p>Trending videos pulled live from YouTube and TikTok.</p>
+            </article>
+            <article class="skill-card pj-feature ">
+              <span class="icon-tile"><i data-lucide="infinity"></i></span>
+              <h3>Infinite scrolling</h3>
+              <p>A continuous feed that keeps loading as you browse.</p>
+            </article>
+            <article class="skill-card pj-feature ">
+              <span class="icon-tile"><i data-lucide="filter"></i></span>
+              <h3>Dynamic filtering</h3>
+              <p>Narrow the feed instantly without reloading the page.</p>
+            </article>
+            <article class="skill-card pj-feature ">
+              <span class="icon-tile"><i data-lucide="repeat"></i></span>
+              <h3>Asynchronous loading</h3>
+              <p>Content is fetched in the background so the interface never blocks.</p>
+            </article>
+            <article class="skill-card pj-feature ">
+              <span class="icon-tile"><i data-lucide="plug"></i></span>
+              <h3>Custom multi-platform embed system</h3>
+              <p>One embed layer across platforms, with automatic fallbacks when a third-party player fails.</p>
+            </article>
+            <article class="skill-card pj-feature ">
+              <span class="icon-tile"><i data-lucide="shield-check"></i></span>
+              <h3>Controlled third-party content</h3>
+              <p>Third-party content is handled deliberately, not dropped straight into the page.</p>
+            </article>
+        </div>
+      </section>
+
+      <!-- Next -->
+      <section class="pj-next">
+        <a class="pj-next__link" href="../../work/gagner-for-schools/" data-transition>
+          <span class="pj-next__label">Next project · 01</span>
+          <span class="pj-next__title">Gagner for Schools</span>
+          <span class="pj-next__kicker">AI-powered school management SaaS</span>
+          <span class="pj-next__arrow"><i data-lucide="arrow-right"></i></span>
+        </a>
+      </section>
+
+      <!-- CTA -->
+      <section class="pj-cta section">
+        <div class="container pj-cta__inner">
+          <h2 class="split-title">Need something <em>like this?</em></h2>
+          <a href="../../#contact" class="btn btn--primary magnetic" data-transition>Start a conversation <i data-lucide="arrow-right"></i></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__word" aria-hidden="true">Akalazu<b>.</b></div>
+        <div class="footer__row">
+          <span>© <span class="year">2026</span> Akalazu Udochukwu David</span>
+          <a href="#top" class="pill back-top"><i data-lucide="arrow-up"></i>Back to top</a>
+          <span>Based in Nigeria · <b>Available worldwide</b></span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="../../assets/js/project.js"></script>
+  </body>
+</html>

@@ -6,13 +6,13 @@
     <title>Akalazu David — Software Engineer & Technical Project Manager</title>
     <meta
       name="description"
-      content="Akalazu Udochukwu David — backend-focused Software Engineer and Technical Project Manager building multi-tenant SaaS, APIs and data pipelines with PHP, MySQL, JavaScript and React."
+      content="Akalazu Udochukwu David — backend-focused Software Engineer and Technical Project Manager building multi-tenant SaaS, APIs and data pipelines with PHP, Python, MySQL, JavaScript and React."
     />
     <meta name="theme-color" content="#ffffff" />
     <meta property="og:title" content="Akalazu David — Software Engineer & Technical PM" />
     <meta
       property="og:description"
-      content="I build software people rely on every day. Backend, full-stack and technical delivery."
+      content="I build software people rely on every day. Backend, frontend and technical delivery."
     />
     <meta property="og:image" content="./assets/image/david.jpg" />
     <link
@@ -29,13 +29,14 @@
     <link rel="stylesheet" href="./assets/css/site.css" />
     <script>
       document.documentElement.classList.replace("no-js", "js");
-      // Show a clean URL: /index.html → /
+      try { if (sessionStorage.getItem("intro")) document.documentElement.classList.add("seen"); } catch (e) {}
       if (/\/index\.html$/.test(location.pathname)) {
         history.replaceState(null, "", location.pathname.replace(/index\.html$/, "") + location.search + location.hash);
       }
     </script>
   </head>
   <body>
+    <div class="curtain" aria-hidden="true"></div>
     <!-- Preloader -->
     <div class="preloader" aria-hidden="true">
       <div class="preloader__inner">
@@ -112,11 +113,11 @@
             <div class="hero__cards">
               <article class="mini-card">
                 <span class="icon-tile"><i data-lucide="server"></i></span>
-                <div><h3>Backend</h3><p>PHP, REST APIs, auth, caching and background jobs</p></div>
+                <div><h3>Backend</h3><p>PHP and Python, REST APIs, auth, caching and background jobs</p></div>
               </article>
               <article class="mini-card">
                 <span class="icon-tile"><i data-lucide="monitor"></i></span>
-                <div><h3>Frontend</h3><p>JavaScript, TypeScript and accessible React interfaces</p></div>
+                <div><h3>Frontend</h3><p>React, TypeScript, Tailwind and WCAG-minded interfaces</p></div>
               </article>
               <article class="mini-card">
                 <span class="icon-tile"><i data-lucide="database"></i></span>
@@ -131,50 +132,40 @@
 
           <aside class="hire-card" aria-label="Work with me">
             <h2>Work with me</h2>
-            <p class="hire-card__sub">Choose what you need, then let's talk details.</p>
-            <div class="role-tabs" role="tablist">
+            <p class="hire-card__sub">Pick the role you need, then let's talk details.</p>
+            <div class="role-tabs role-tabs--3" role="tablist">
               <button class="role-tab is-active" role="tab" aria-selected="true" data-role="0">
                 <i data-lucide="server"></i><span>Backend</span>
               </button>
               <button class="role-tab" role="tab" aria-selected="false" data-role="1">
-                <i data-lucide="layers"></i><span>Full-stack</span>
+                <i data-lucide="monitor"></i><span>Frontend</span>
               </button>
               <button class="role-tab" role="tab" aria-selected="false" data-role="2">
                 <i data-lucide="clipboard-list"></i><span>Tech PM</span>
-              </button>
-              <button class="role-tab" role="tab" aria-selected="false" data-role="3">
-                <i data-lucide="graduation-cap"></i><span>Mentor</span>
               </button>
             </div>
 
             <div class="role-panels">
               <div class="role-panel is-active" data-panel="0">
                 <label>What you get</label>
-                <p>APIs, data pipelines and multi-tenant SaaS backends in PHP and MySQL. Clean schemas, fast queries, sensible auth.</p>
+                <p>APIs, data pipelines and multi-tenant SaaS backends built to stay up. Clean schemas, fast queries, sensible auth, and production issues owned until they're fixed.</p>
                 <label>Stack</label>
-                <div class="chips"><span>PHP · OOP/MVC</span><span>REST APIs</span><span>MySQL</span><span>RBAC</span><span>Paystack</span></div>
-                <div class="role-stat"><i data-lucide="gauge"></i> 25% faster queries through indexing &amp; caching</div>
+                <div class="chips"><span>PHP · OOP/MVC</span><span>Python</span><span>REST APIs</span><span>MySQL</span><span>RBAC</span><span>Paystack &amp; Flutterwave</span></div>
+                <div class="role-stat"><i data-lucide="gauge"></i> 60+ production issues resolved on a platform serving 2,300+ schools</div>
               </div>
               <div class="role-panel" data-panel="1">
                 <label>What you get</label>
-                <p>Complete features from database to UI, with JavaScript, TypeScript and React on the front end.</p>
+                <p>Fast, responsive and accessible interfaces, from React apps to lightweight HTMX and Alpine front ends, built against WCAG and wired to real APIs.</p>
                 <label>Stack</label>
-                <div class="chips"><span>React</span><span>TypeScript</span><span>PHP</span><span>MySQL</span><span>Fetch / Async</span></div>
+                <div class="chips"><span>React</span><span>JavaScript · TypeScript</span><span>Tailwind</span><span>HTMX · Alpine JS</span><span>WCAG</span></div>
                 <div class="role-stat"><i data-lucide="zap"></i> 30% faster page loads at Revna Biosciences</div>
               </div>
               <div class="role-panel" data-panel="2">
                 <label>What you get</label>
-                <p>Business requirements turned into specs developers can build from, and sprints that ship when they're supposed to.</p>
+                <p>Business requirements turned into specs developers can build from, and sprints that ship when they're supposed to, for analytics and campaign products.</p>
                 <label>Toolkit</label>
-                <div class="chips"><span>Sprint planning</span><span>Tech specs</span><span>Retros</span><span>Stakeholders</span></div>
+                <div class="chips"><span>Sprint planning</span><span>Tech specs</span><span>Retros</span><span>Stakeholders</span><span>Release delivery</span></div>
                 <div class="role-stat"><i data-lucide="award"></i> Promoted to TPM at 30 Cycle</div>
-              </div>
-              <div class="role-panel" data-panel="3">
-                <label>What you get</label>
-                <p>Structured curricula and hands-on teaching, from JavaScript fundamentals to building real applications.</p>
-                <label>Toolkit</label>
-                <div class="chips"><span>JavaScript</span><span>Curriculum</span><span>Code review</span></div>
-                <div class="role-stat"><i data-lucide="trophy"></i> 75% of graduates hired as developers</div>
               </div>
             </div>
 
@@ -196,12 +187,12 @@
       <section class="marquee" aria-label="Technologies">
         <div class="marquee__row">
           <div class="marquee__track">
-            <span>PHP</span><b>✦</b><span>MySQL</span><b>✦</b><span>JavaScript</span><b>✦</b><span>TypeScript</span><b>✦</b><span>React</span><b>✦</b><span>REST APIs</span><b>✦</b><span>Multi-tenant SaaS</span><b>✦</b><span>RBAC</span><b>✦</b>
+            <span>PHP</span><b>✦</b><span>MySQL</span><b>✦</b><span>JavaScript</span><b>✦</b><span>TypeScript</span><b>✦</b><span>React</span><b>✦</b><span>Python</span><b>✦</b><span>REST APIs</span><b>✦</b><span>Multi-tenant SaaS</span><b>✦</b><span>RBAC</span><b>✦</b>
           </div>
         </div>
         <div class="marquee__row marquee__row--alt">
           <div class="marquee__track">
-            <span>Paystack</span><b>✦</b><span>Flutterwave</span><b>✦</b><span>SQLite</span><b>✦</b><span>Git &amp; GitHub</span><b>✦</b><span>Claude AI</span><b>✦</b><span>GitHub Copilot</span><b>✦</b><span>Agile delivery</span><b>✦</b><span>Root cause analysis</span><b>✦</b>
+            <span>Tailwind</span><b>✦</b><span>HTMX</span><b>✦</b><span>Alpine JS</span><b>✦</b><span>WCAG</span><b>✦</b><span>Paystack</span><b>✦</b><span>Flutterwave</span><b>✦</b><span>SQLite</span><b>✦</b><span>Git &amp; GitHub</span><b>✦</b><span>Claude AI</span><b>✦</b><span>GitHub Copilot</span><b>✦</b><span>Agile delivery</span><b>✦</b><span>Root cause analysis</span><b>✦</b>
           </div>
         </div>
       </section>
@@ -245,10 +236,14 @@
           <div class="about__copy">
             <div class="eyebrow"><span>01</span>About</div>
             <p class="reveal-text">
-              I'm a backend-focused engineer with a record of shipping and owning features on live,
-              multi-tenant SaaS products. After consistently delivering as a backend engineer, I was
-              promoted to Technical Project Manager at 30 Cycle. I write clean PHP and JavaScript, think
-              carefully about database design, and take ownership seriously.
+              I build and ship production-ready software that solves real business problems, from
+              multi-tenant SaaS and APIs to accessible web interfaces.
+            </p>
+            <p class="about__body">
+              I work with PHP, Python and JavaScript, and I care about clean architecture and sound
+              database design. After delivering as a backend engineer, I was promoted to Technical
+              Project Manager at 30 Cycle, bridging business goals and engineering from requirements
+              to release.
             </p>
             <dl class="facts">
               <div><dt>Location</dt><dd>Nigeria, open to relocation</dd></div>
@@ -266,37 +261,38 @@
           <div class="section-head">
             <div class="eyebrow"><span>02</span>Toolkit</div>
             <h2 class="split-title">The stack I <em>reach for.</em></h2>
+            <p class="section-sub">The technologies and practices I use to build and ship software.</p>
           </div>
           <div class="skill-grid">
             <article class="skill-card">
               <span class="icon-tile"><i data-lucide="server"></i></span>
-              <h3>Backend</h3>
-              <ul><li>PHP (OOP, MVC)</li><li>REST API design &amp; versioning</li><li>Session &amp; token auth</li><li>Background processing</li><li>Server-side caching</li></ul>
+              <h3>Backend Engineering</h3>
+              <ul><li>PHP (OOP, MVC)</li><li>Python</li><li>REST API design</li><li>Authentication</li><li>API Integration</li></ul>
             </article>
             <article class="skill-card">
               <span class="icon-tile"><i data-lucide="monitor"></i></span>
-              <h3>Frontend</h3>
-              <ul><li>JavaScript (ES6+)</li><li>TypeScript</li><li>React.js</li><li>Async/Await &amp; Fetch</li><li>Responsive, accessible UI</li></ul>
+              <h3>Frontend Development</h3>
+              <ul><li>JavaScript (ES6+)</li><li>TypeScript</li><li>React.js</li><li>Alpine.js</li><li>HTMX</li><li>Tailwind CSS</li></ul>
             </article>
             <article class="skill-card">
               <span class="icon-tile"><i data-lucide="database"></i></span>
-              <h3>Databases</h3>
-              <ul><li>MySQL schema design</li><li>Indexing &amp; query optimisation</li><li>Complex joins</li><li>Stored procedures</li><li>SQLite</li></ul>
+              <h3>Databases &amp; Performance</h3>
+              <ul><li>MySQL</li><li>SQLite</li><li>Schema Design</li><li>Query Optimisation</li><li>Indexing</li><li>Caching</li></ul>
             </article>
             <article class="skill-card">
               <span class="icon-tile"><i data-lucide="network"></i></span>
-              <h3>System design</h3>
-              <ul><li>Multi-tenant SaaS</li><li>Role-based access control</li><li>Modular monolith</li><li>Paystack &amp; Flutterwave</li><li>Social media &amp; CRM APIs</li></ul>
+              <h3>Architecture &amp; Systems</h3>
+              <ul><li>Multi-tenant SaaS</li><li>Modular Monoliths</li><li>Role-Based Access Control</li><li>SOLID Principles</li><li>Layered Architecture</li></ul>
+            </article>
+            <article class="skill-card">
+              <span class="icon-tile"><i data-lucide="plug"></i></span>
+              <h3>Integrations &amp; Accessibility</h3>
+              <ul><li>Paystack</li><li>Flutterwave</li><li>Social Media APIs</li><li>CRM Integrations</li><li>WCAG</li><li>MARS Accessibility Testing</li></ul>
             </article>
             <article class="skill-card">
               <span class="icon-tile"><i data-lucide="git-branch"></i></span>
-              <h3>Engineering</h3>
-              <ul><li>Git &amp; GitHub</li><li>Production debugging</li><li>Root cause analysis</li><li>Technical documentation</li><li>Agile sprint delivery</li></ul>
-            </article>
-            <article class="skill-card">
-              <span class="icon-tile"><i data-lucide="sparkles"></i></span>
-              <h3>AI-augmented</h3>
-              <ul><li>Claude AI</li><li>GitHub Copilot</li><li>AI in daily development</li><li>Faster output, same quality bar</li></ul>
+              <h3>Engineering &amp; Delivery</h3>
+              <ul><li>Git</li><li>GitHub</li><li>Code Review</li><li>Production Debugging</li><li>Technical Documentation</li><li>Agile Delivery</li><li>Technical Project Management</li></ul>
             </article>
           </div>
         </div>
@@ -316,14 +312,11 @@
               <span class="job__dot"></span>
               <div class="job__card">
                 <header>
-                  <div>
-                    <h3>Technical Project Manager <span class="tag tag--green">Promoted</span></h3>
-                    <p class="job__co">30 Cycle</p>
-                  </div>
+                  <div><h3>Technical Project Manager <span class="tag tag--green">Promoted</span></h3><p class="job__co">30 Cycle</p></div>
                 </header>
-                <p>Leads delivery of cross-platform creator analytics, influence scoring, audience insights and the SME/agency campaign portal for Africa's creator economy. Turns business requirements into developer-ready specs and introduced sprint planning, reviews and retros that made releases predictable.</p>
-                <p>Previously, as Backend Developer, architected the PHP + MySQL pipelines ingesting creator metrics from multiple social APIs and built the REST API layer behind the analytics dashboards.</p>
-                <div class="chips"><span>Delivery</span><span>Specs</span><span>PHP</span><span>MySQL</span><span>Social APIs</span></div>
+                <p>Lead technical delivery for creator analytics, influence scoring, audience insights and campaign management products built for Africa's creator economy. Translate business requirements into developer-ready specifications and guide delivery from planning to release. Introduced structured sprint planning, reviews and retrospectives that made delivery more predictable.</p>
+                <p>Previously, as Backend Developer, architected PHP and MySQL pipelines ingesting creator metrics from multiple social media APIs and built the REST API layer powering the analytics dashboards.</p>
+                <div class="chips"><span>Technical leadership</span><span>PHP</span><span>MySQL</span><span>Social APIs</span></div>
               </div>
             </article>
 
@@ -331,10 +324,11 @@
               <span class="job__dot"></span>
               <div class="job__card">
                 <header>
-                  <div><h3>Software Engineer</h3><p class="job__co">Edves</p></div>
+                  <div><h3>Software Engineer</h3><p class="job__co">Edves · Education technology</p></div>
                 </header>
-                <p>Owned resolution of 60+ production issues on a multi-tenant school management SaaS serving hundreds of Nigerian schools: result rendering, score calculations, attendance, CBT, billing and mobile stability. Built dynamic end-of-term and mid-term report templates, improved the CBT module and enhanced the analytics dashboard.</p>
-                <div class="metrics"><div><strong>60+</strong><small>issues resolved</small></div><div><strong>100s</strong><small>of schools served</small></div></div>
+                <p>Worked on a multi-tenant school management platform serving 2,300+ schools and over 1 million users, resolving 60+ production issues across result rendering, score calculations, attendance, CBT, billing and mobile stability. Built dynamic midterm and end-of-term report templates, improved assessment workflows and enhanced the analytics dashboards.</p>
+                <div class="chips"><span>React</span><span>PHP</span><span>Alpine JS</span><span>HTMX</span><span>Python</span></div>
+                <div class="metrics"><div><strong>2,300+</strong><small>schools</small></div><div><strong>625K+</strong><small>students</small></div><div><strong>387K+</strong><small>parents</small></div><div><strong>57K+</strong><small>teachers</small></div></div>
               </div>
             </article>
 
@@ -342,10 +336,23 @@
               <span class="job__dot"></span>
               <div class="job__card">
                 <header>
-                  <div><h3>Backend Developer</h3><p class="job__co">Pamtech Group</p></div>
+                  <div><h3>Backend Developer</h3><p class="job__co">Pamtech Group · Oil &amp; gas and automotive</p></div>
                 </header>
-                <p>Designed PHP/MySQL backend systems for oil &amp; gas operations used by 100+ people daily. Engineered an automated check-in/check-out system and a full auto-parts e-commerce platform.</p>
-                <div class="metrics"><div><strong>+20%</strong><small>workforce efficiency</small></div><div><strong>+15%</strong><small>Q1 revenue</small></div><div><strong>−25%</strong><small>query time</small></div></div>
+                <p>Engineered backend systems for operational workflows and digital commerce, built to cut manual work and open new revenue channels. Developed an automated employee check-in/check-out system with reporting, and a full auto-parts e-commerce platform that took the business beyond traditional sales.</p>
+                <div class="chips"><span>Tailwind</span><span>JavaScript</span><span>React</span><span>PHP</span></div>
+                <div class="metrics"><div><strong>+20%</strong><small>workforce efficiency</small></div><div><strong>+15%</strong><small>revenue</small></div><div><strong>−25%</strong><small>query time</small></div></div>
+              </div>
+            </article>
+
+            <article class="job">
+              <span class="job__dot"></span>
+              <div class="job__card">
+                <header>
+                  <div><h3>Accessibility Engineer <span class="tag">Contract</span></h3><p class="job__co">PAIT Advanced Solutions Ltd.</p></div>
+                </header>
+                <p>Audit websites against WCAG using accessibility testing tools, including MARS, to find barriers that keep people with visual, auditory, motor or cognitive disabilities from navigating digital experiences.</p>
+                <p>Document findings so teams can understand the usability impact and prioritise fixes, supporting more inclusive, standards-aligned websites.</p>
+                <div class="chips"><span>WCAG</span><span>MARS</span><span>Accessibility auditing</span><span>Inclusive design</span><span>Usability evaluation</span></div>
               </div>
             </article>
 
@@ -355,8 +362,9 @@
                 <header>
                   <div><h3>Front-End Developer</h3><p class="job__co">Revna Biosciences · Accra, Ghana</p></div>
                 </header>
-                <p>Built responsive, accessible interfaces for biosciences platforms in React. Cut page load times through code splitting, lazy loading and asset optimisation.</p>
-                <div class="metrics"><div><strong>+30%</strong><small>page load speed</small></div></div>
+                <p>Built responsive, accessible React interfaces for bioscience platforms that work smoothly across devices. Improved performance through code splitting, lazy loading and asset optimisation.</p>
+                <div class="chips"><span>React</span><span>Python</span><span>Streamlit</span></div>
+                <div class="metrics"><div><strong>+30%</strong><small>page-load performance</small></div></div>
               </div>
             </article>
 
@@ -366,8 +374,8 @@
                 <header>
                   <div><h3>Freelance Backend Developer</h3><p class="job__co">Independent consulting</p></div>
                 </header>
-                <p>Delivered CMS builds, internal tools and API-integrated platforms across industries. Integrated Paystack, Flutterwave, CRMs and analytics APIs, and acted as sole technical contact: architecture, client communication and timelines.</p>
-                <div class="chips"><span>PHP</span><span>MySQL</span><span>Paystack</span><span>Flutterwave</span><span>CRM APIs</span></div>
+                <p>Partnered with businesses across industries to design and deliver web applications, internal tools, content management systems and API-integrated platforms. Owned delivery end to end: architecture, third-party integrations, client communication and timelines, from requirements to deployment.</p>
+                <div class="chips"><span>PHP</span><span>MySQL</span><span>REST APIs</span><span>Paystack</span><span>Flutterwave</span><span>CRM &amp; analytics APIs</span></div>
               </div>
             </article>
 
@@ -375,9 +383,9 @@
               <span class="job__dot"></span>
               <div class="job__card">
                 <header>
-                  <div><h3>JavaScript Instructor</h3><p class="job__co">STGEI International</p></div>
+                  <div><h3>JavaScript Instructor</h3><p class="job__co">STGEI International · Education</p></div>
                 </header>
-                <p>Designed and taught a structured JavaScript curriculum from fundamentals to full applications. Graduates moved into professional developer roles within months.</p>
+                <p>Designed and taught a structured JavaScript curriculum from programming fundamentals to complete applications, through practical exercises and problem-solving that taught students to think like developers. Several graduates moved into professional developer roles within months.</p>
                 <div class="metrics"><div><strong>75%</strong><small>graduate employment</small></div></div>
               </div>
             </article>
@@ -393,36 +401,59 @@
             <h2 class="split-title">Things I've <em>built.</em></h2>
           </div>
           <div class="work__track">
-            <!-- Gagner -->
+            <!-- projects:start -->
+
             <article class="project">
-              <div class="project__visual mock mock--school" aria-hidden="true">
-                <div class="mock__bar"><i></i><i></i><i></i><span>gagner.school/admin</span></div>
-                <div class="mock__body">
-                  <aside class="mock__side"><b></b><b class="on"></b><b></b><b></b><b></b></aside>
-                  <div class="mock__main">
-                    <div class="mock__roles"><span class="on">Student</span><span>Teacher</span><span>Admin</span><span>Super Admin</span></div>
-                    <div class="mock__tiles">
-                      <div><small>Students</small><strong>1,248</strong></div>
-                      <div><small>CBT today</small><strong>36</strong></div>
-                      <div><small>Fees paid</small><strong>82%</strong></div>
-                    </div>
-                    <div class="mock__chart"><i style="--h:45%"></i><i style="--h:70%"></i><i style="--h:55%"></i><i style="--h:88%"></i><i style="--h:64%"></i><i style="--h:92%"></i><i style="--h:76%"></i></div>
-                  </div>
-                </div>
+              <div class="project__visual mock shot" aria-hidden="true">
+                <div class="mock__bar"><i></i><i></i><i></i></div>
+                <img src="assets/image/gagner-schools.jpg" alt="" width="1800" height="1042" loading="lazy" decoding="async" />
               </div>
               <div class="project__info">
                 <span class="project__num">01</span>
-                <h3>Gagner for Schools</h3>
+                <h3><a class="project__link" href="work/gagner-for-schools/" data-transition>Gagner for Schools</a></h3>
                 <p class="project__kicker">AI-powered school management SaaS</p>
                 <p>A multi-tenant platform that runs academic, administrative and financial operations for Nigerian schools. RBAC dashboards for four roles, CBT with automated results, PIN-based result access modelled on WAEC, plus AI adaptive quizzes and tutoring.</p>
                 <div class="chips"><span>PHP</span><span>JavaScript</span><span>MySQL</span><span>REST APIs</span><span>AI</span></div>
+                <span class="project__cta">View case study <i data-lucide="arrow-up-right"></i></span>
               </div>
             </article>
 
-            <!-- Trenvid -->
+
+            <article class="project">
+              <div class="project__visual mock shot" aria-hidden="true">
+                <div class="mock__bar"><i></i><i></i><i></i></div>
+                <img src="assets/image/30cycle.jpg" alt="" width="1800" height="1042" loading="lazy" decoding="async" />
+              </div>
+              <div class="project__info">
+                <span class="project__num">02</span>
+                <h3><a class="project__link" href="work/30-cycle/" data-transition>30 Cycle</a></h3>
+                <p class="project__kicker">Creator analytics for Africa's creator economy</p>
+                <p>Data infrastructure for Africa's creator economy: PHP + MySQL pipelines that ingest creator metrics from multiple social APIs, the REST layer behind the analytics dashboards, and the delivery leadership that shipped it.</p>
+                <div class="chips"><span>PHP</span><span>MySQL</span><span>REST APIs</span><span>Social APIs</span><span>Delivery</span></div>
+                <span class="project__cta">View case study <i data-lucide="arrow-up-right"></i></span>
+              </div>
+            </article>
+
+
+            <article class="project">
+              <div class="project__visual mock shot" aria-hidden="true">
+                <div class="mock__bar"><i></i><i></i><i></i></div>
+                <img src="assets/image/9jabrief.jpg" alt="" width="1800" height="1042" loading="lazy" decoding="async" />
+              </div>
+              <div class="project__info">
+                <span class="project__num">03</span>
+                <h3><a class="project__link" href="work/9jabrief/" data-transition>9jabrief</a></h3>
+                <p class="project__kicker">Real-time news aggregation</p>
+                <p>A news platform with under 5 seconds of content latency and personalised filtering that lifted discoverability 40% and retention 25%. Held 99.9% uptime through traffic surges, and SEO work grew organic traffic 50% in six months.</p>
+                <div class="chips"><span>PHP</span><span>MySQL</span><span>SEO</span><span>REST APIs</span></div>
+                <span class="project__cta">View case study <i data-lucide="arrow-up-right"></i></span>
+              </div>
+            </article>
+
+
             <article class="project">
               <div class="project__visual mock mock--video" aria-hidden="true">
-                <div class="mock__bar"><i></i><i></i><i></i><span>trenvid.com/trending</span></div>
+                <div class="mock__bar"><i></i><i></i><i></i><span>Trenvid · Trending</span></div>
                 <div class="mock__body mock__body--col">
                   <div class="mock__filters"><span class="on">All</span><span>YouTube</span><span>TikTok</span><span>Music</span></div>
                   <div class="mock__videos">
@@ -436,36 +467,15 @@
                 </div>
               </div>
               <div class="project__info">
-                <span class="project__num">02</span>
-                <h3>Trenvid</h3>
+                <span class="project__num">04</span>
+                <h3><a class="project__link" href="work/trenvid/" data-transition>Trenvid</a></h3>
                 <p class="project__kicker">Trending video aggregation platform</p>
                 <p>Pulls trending videos from YouTube and TikTok in real time, with infinite scrolling, dynamic filtering and async loading. A custom multi-platform embed system handles third-party content with automatic fallbacks.</p>
                 <div class="chips"><span>JavaScript</span><span>PHP</span><span>MySQL</span><span>YouTube API</span><span>TikTok API</span></div>
+                <span class="project__cta">View case study <i data-lucide="arrow-up-right"></i></span>
               </div>
             </article>
-
-            <!-- 9jabrief -->
-            <article class="project">
-              <div class="project__visual mock mock--news" aria-hidden="true">
-                <div class="mock__bar"><i></i><i></i><i></i><span>9jabrief.com</span></div>
-                <div class="mock__body mock__body--col">
-                  <div class="mock__live"><span class="pulse"></span> Live · updated 4s ago</div>
-                  <div class="mock__news">
-                    <div><b></b><p><i></i><i></i></p></div>
-                    <div><b></b><p><i></i><i></i></p></div>
-                    <div><b></b><p><i></i><i></i></p></div>
-                  </div>
-                  <div class="mock__kpis"><span>99.9% uptime</span><span>+50% organic</span></div>
-                </div>
-              </div>
-              <div class="project__info">
-                <span class="project__num">03</span>
-                <h3>9jabrief</h3>
-                <p class="project__kicker">Real-time news aggregation</p>
-                <p>A news platform with under 5 seconds of content latency and personalised filtering that lifted discoverability 40% and retention 25%. Held 99.9% uptime through traffic surges, and SEO work grew organic traffic 50% in six months.</p>
-                <div class="chips"><span>PHP</span><span>MySQL</span><span>SEO</span><span>REST APIs</span></div>
-              </div>
-            </article>
+            <!-- projects:end -->
           </div>
         </div>
       </section>
@@ -501,7 +511,7 @@
           <div class="contact__copy">
             <div class="eyebrow"><span>06</span>Contact</div>
             <h2 class="contact__title split-title">Let's build something that <em>ships.</em></h2>
-            <p class="contact__lead">Hiring for a backend, full-stack or technical PM role, or have a product that needs an owner? Tell me about it.</p>
+            <p class="contact__lead">Hiring for a backend, frontend or technical PM role, or have a product that needs an owner? Tell me about it.</p>
             <ul class="contact__list">
               <li><span class="icon-tile"><i data-lucide="mail"></i></span><a href="mailto:akalazuudochukwu@gmail.com">akalazuudochukwu@gmail.com</a></li>
               <li><span class="icon-tile"><i data-lucide="phone"></i></span><a href="https://wa.me/2349035946770" target="_blank" rel="noopener">+234 903 594 6770</a></li>

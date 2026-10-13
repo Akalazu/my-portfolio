@@ -202,6 +202,18 @@
   gsap.registerPlugin(ScrollTrigger, SplitText);
   gsap.defaults({ ease: "power3.out" });
 
+  // Page transitions: the curtain rises, then we navigate
+  const curtain = $(".curtain");
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest("a[data-transition]");
+    if (!a || !curtain || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+    e.preventDefault();
+    setMenu(false);
+    gsap.to(curtain, { clipPath: "inset(0% 0 0 0)", duration: 0.8, ease: "expo.inOut", onComplete: () => (location.href = a.href) });
+  });
+  // Back/forward cache can restore the page with the curtain still down
+  addEventListener("pageshow", (e) => e.persisted && curtain && gsap.set(curtain, { clipPath: "inset(100% 0 0 0)" }));
+
   // Lenis smooth scroll driven by GSAP's ticker
   if (window.Lenis) {
     lenis = new Lenis({ duration: 1.15, smoothWheel: true });
@@ -238,7 +250,15 @@
     const counter = { v: 0 };
     const intro = gsap.timeline();
 
-    intro
+    const seen = document.documentElement.classList.contains("seen");
+
+    if (seen) {
+      // Returning visitor (e.g. back from a case study): skip the loader, just wipe the curtain away
+      intro
+        .set(".preloader__inner", { autoAlpha: 0 })
+        .to(".preloader", { clipPath: "inset(0 0 100% 0)", duration: 0.9, ease: "expo.inOut", delay: 0.1 });
+    } else
+      intro
       .to(".preloader__name span, .preloader__name b", {
         yPercent: 0,
         duration: 0.9,
@@ -257,10 +277,20 @@
         0.2
       )
       .to(".preloader__inner", { yPercent: -40, autoAlpha: 0, duration: 0.5, ease: "power2.in" })
-      .to(".preloader", { clipPath: "inset(0 0 100% 0)", duration: 1, ease: "expo.inOut" }, "-=0.1")
+      .to(".preloader", { clipPath: "inset(0 0 100% 0)", duration: 1, ease: "expo.inOut" }, "-=0.1");
+
+    intro
       .add(() => {
         preloader.remove();
         if (lenis) lenis.start();
+        try {
+          sessionStorage.setItem("intro", "1");
+        } catch (e) {}
+        // Arriving from a case study (…/#work): jump to that section once the layout is final
+        if (location.hash && location.hash !== "#top") {
+          const target = $(location.hash);
+          if (target) setTimeout(() => (lenis ? lenis.scrollTo(target, { immediate: true }) : target.scrollIntoView()), 150);
+        }
       })
       .add(heroIntro(), "-=0.6");
 
@@ -348,7 +378,7 @@
       });
       document.addEventListener("mouseleave", () => gsap.to(cursor, { autoAlpha: 0, duration: 0.3 }));
       document.addEventListener("mouseover", (e) => {
-        const hot = e.target.closest("a, button, label.role-tab, .skill-card, .mini-card");
+        const hot = e.target.closest("a, button, label.role-tab, .skill-card, .mini-card, .project");
         cursor.classList.toggle("is-hover", !!hot);
       });
 
@@ -602,6 +632,7 @@
     function animateMock(project, scrollTrigger) {
       const tl = gsap.timeline({ scrollTrigger });
       tl.from($(".project__visual", project), { y: 40, rotation: -2, autoAlpha: 0, duration: 1, ease: "power4.out" })
+        .from($$(".shot img", project), { scale: 1.3, duration: 1.6, ease: "power3.out" }, 0)
         .from($$(".mock__chart i", project), { scaleY: 0, duration: 0.9, stagger: 0.06, ease: "power4.out" }, 0.3)
         .from($$(".mock__tiles div, .mock__roles span, .mock__filters span", project), { y: 14, autoAlpha: 0, stagger: 0.04, duration: 0.5 }, 0.3)
         .from($$(".mock__videos .v", project), { scale: 0.6, autoAlpha: 0, stagger: { each: 0.06, grid: "auto", from: "start" }, duration: 0.7, ease: "back.out(1.6)" }, 0.3)
