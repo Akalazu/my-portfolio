@@ -1024,6 +1024,16 @@ svg.lucide {
   padding-left: 0;
 }
 
+.stat__label {
+  display: block;
+  margin-bottom: 14px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
 .stat strong {
   display: block;
   font-family: var(--font-display);
@@ -1036,7 +1046,7 @@ svg.lucide {
 
 .stat p {
   margin: 12px 0 0;
-  max-width: 220px;
+  max-width: 240px;
   font-size: 15px;
   color: var(--muted);
 }
